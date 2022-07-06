@@ -1,0 +1,43 @@
+{
+  "name": "pets-paw",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "lint-check": "eslint . --ext ts --ext tsx --ext js",
+    "lint-fix": "next lint -- --fix",
+    "prettier-check": "prettier --check .",
+    "prettier-fix": "prettier --write \"{components,hooks,store,locales,pages,styles}/**/*.{ts,tsx,js,jsx,scss,css,json,html}\"",
+    "ts-check": "tsc --pretty --noEmit",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "next": "12.2.0",
+    "prettier": "^2.7.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.2",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.1",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "eslint": "8.19.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "12.2.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "jest": "^28.1.2",
+    "typescript": "^4.7.4"
+  }
+}

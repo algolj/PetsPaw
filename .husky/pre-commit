@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh";
+
+echo '🐶   Husky starts checking';
+
+
+# Check Prettier standards
+echo '🅿️   Check Prettier';
+npm run prettier-check ||
+(
+  echo '❌   Prettier check failed. Run the fix with the command `npm run prettier-fix`. ';
+  false;
+)
+
+# Check ESLint Standards
+echo '✏️   Check ESLint';
+npm run lint-check ||
+(
+  echo '❌   ESLint check failed. Run the fix with the command `npm run lint-fix`';
+  false; 
+)
+
+# Check tsconfig standards
+echo '🦾   Check TypeScript';
+npm run ts-check ||
+(
+  echo '❌   TypeScript check failed.';
+  false;
+)
+
+# Successful completion notification
+echo '✅   All tests passed';
