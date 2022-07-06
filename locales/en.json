@@ -1,1 +1,11 @@
-{}
+{
+  "lang": "English",
+  "hiIntern": "Hi intern!",
+  "welcome": "Welcome to MI 2022 Front-end test",
+  "useApi": "Lets start using The Cat API",
+  "logoAlt": "logo",
+  "voting": "voting",
+  "breeds": "breeds",
+  "gallery": "gallery",
+  "hugCat": "person trying to hug a cat"
+}

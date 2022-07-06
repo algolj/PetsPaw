@@ -1,0 +1,69 @@
+@import '../../../../styles/vars.scss';
+
+.mode {
+  display: flex;
+}
+
+.mode__checkbox {
+  display: inline-block;
+  height: $size__header_height;
+  line-height: $size__header_height;
+  margin-left: 5px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.mode__checkbox .mode__checkbox-switch {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: $size__darkmode_width;
+  height: $size__header_height;
+  border-radius: 25%/50%;
+  vertical-align: top;
+  background: transparentize($color__voiting_bg-hover, 0.8);
+  transition: 0.2s;
+}
+.mode__checkbox input[type='checkbox']:checked + .mode__checkbox-switch:before {
+  left: calc($size__margin_dark-mode * -1);
+}
+
+.mode__checkbox .mode__checkbox-switch:before {
+  content: '';
+  position: absolute;
+  top: $size__margin_dark-mode;
+  left: $size__margin_dark-mode;
+  display: inline-block;
+  width: $size__darkmode_point;
+  height: $size__darkmode_point;
+  border-radius: 50%;
+  background: $color__voiting_text;
+  transition: 0.15s;
+}
+.mode__checkbox input[type='checkbox'] {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.mode__checkbox input[type='checkbox']:checked + .mode__checkbox-switch {
+  background: $color__voiting_bg-hover;
+}
+.mode__checkbox input[type='checkbox']:checked + .mode__checkbox-switch:before {
+  transform: translateX(28px);
+}
+
+.mode__icon-container {
+  height: $size__header_height;
+  width: $size__header_height;
+  background: url('/assets/svg/eye-close.svg') center center no-repeat,
+    transparentize($color__voiting_bg, 0.95);
+  border-radius: 50%;
+
+  &_white {
+    background: url('/assets/svg/eye.svg') center center no-repeat,
+      $color__voiting_bg;
+  }
+}

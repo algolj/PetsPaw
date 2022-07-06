@@ -1,0 +1,19 @@
+@import '../../../../styles/vars.scss';
+
+.lang {
+  margin-left: $size__margin_header-settings;
+  background-color: $color__voiting_bg-hover;
+  color: $color__voiting_text;
+  border-radius: calc($size__header_height/2);
+  height: $size__header_height;
+  padding: 0.21em;
+
+  &_dark {
+    background: transparentize($color__voiting_bg-hover, 0.8);
+  }
+
+  &__item {
+    background-color: $color__voiting_bg;
+    color: $color__voiting_text-alt;
+  }
+}
