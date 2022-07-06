@@ -1,0 +1,8 @@
+@import './vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Manrope:wght@400;500&display=swap');
+
+:root {
+  font-family: 'Jost', 'Manrope', sans-serif;
+  color: $color__text_main;
+}

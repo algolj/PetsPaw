@@ -3,8 +3,8 @@ import { Provider } from 'react-redux';
 
 import { store } from '../store/store';
 
-import '../styles/globals.scss';
 import '../styles/reset-style.scss';
+import '../styles/globals.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

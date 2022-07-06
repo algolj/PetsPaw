@@ -3,20 +3,16 @@ import Head from 'next/head';
 
 import Layout from '../components/layout';
 
-import useLocale from '../hooks/useLocale';
-
 const Home: NextPage = () => {
-  const locale = useLocale();
-
   return (
     <Layout>
       <Head>
-        <title>Next.JS kit start</title>
-        <meta name="description" content="Next.JS kit start" />
-        <link rel="icon" href="/assets/logo.svg" />
+        <title>PetsPaw</title>
+        <meta name="description" content="PetsPaw" />
+        <link rel="icon" href="/assets/svg/logo-paw.svg" />
       </Head>
 
-      <>{locale.hello}</>
+      <></>
     </Layout>
   );
 };
