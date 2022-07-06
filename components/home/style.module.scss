@@ -6,16 +6,16 @@
   width: 100%;
 
   &::before {
-    top: $sizes__padding_home;
-    left: $sizes__padding_home * 2.5;
-    right: $sizes__padding_home;
-    bottom: $sizes__padding_home;
+    top: $size__padding_home;
+    left: $size__padding_home * 2.5;
+    right: $size__padding_home;
+    bottom: $size__padding_home;
     position: absolute;
     display: block;
-    height: calc(100% - $sizes__padding_home * 2);
-    width: calc(100% - $sizes__padding_home * 3.5);
+    height: calc(100% - $size__padding_home * 2);
+    width: calc(100% - $size__padding_home * 3.5);
     content: '';
-    border-radius: $sizes__padding_home;
+    border-radius: $size__padding_home;
     background-color: $color__bg_home;
   }
 }

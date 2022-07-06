@@ -1,0 +1,18 @@
+@import '../../../styles/vars.scss';
+
+.panel {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    display: block;
+    max-height: $size__padding_header;
+  }
+
+  &__item {
+    &_right {
+      margin-left: auto;
+      margin-right: $size__margin_header-settings;
+    }
+  }
+}

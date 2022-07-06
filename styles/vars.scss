@@ -42,16 +42,29 @@ $color__voiting_text-alt: $color_seventh;
 //
 // sizes
 //
+$size__header_height: 24px;
+$size__darkmode_point: 16px;
+$size__darkmode_width: 44px;
+$size__nav-picture_height: 198px;
 
 //text
-$sizes__text_button: 0.75rem;
-$sizes__text_main: 1rem;
-$sizes__text_second: 1.25rem;
-$sizes__text_title: 2.25rem;
-$sizes__text_header: 2.75rem;
+$size__text_button: 0.75rem;
+$size__text_main: 1rem;
+$size__text_second: 1.25rem;
+$size__text_title: 2.25rem;
+$size__text_header: 2.75rem;
+
+//line height
+$size__lh_text: 1.8rem;
+$size__lh_header: 3.625rem;
 
 //padding
-$sizes__padding_home: 30px;
+$size__padding_home: 30px;
+$size__padding_header: 10.2%;
+
+//margins
+$size__margin_header-settings: 24px;
+$size__margin_dark-mode: 4px;
 
 //
 // var

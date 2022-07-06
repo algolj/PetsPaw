@@ -1,7 +1,7 @@
 @import '../../styles/vars.scss';
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1.05fr;
   background-color: $color__bg_main;
