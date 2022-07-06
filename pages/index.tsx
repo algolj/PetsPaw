@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Home from '../components/home';
 
 import Layout from '../components/layout';
 
-const Home: NextPage = () => {
+const Main: NextPage = () => {
   return (
     <Layout>
       <Head>
@@ -12,9 +13,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/assets/svg/logo-paw.svg" />
       </Head>
 
-      <></>
+      <Home />
     </Layout>
   );
 };
 
-export default Home;
+export default Main;
