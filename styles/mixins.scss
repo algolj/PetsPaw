@@ -1,0 +1,28 @@
+@import './vars.scss';
+
+@mixin standart-buttons($icon) {
+  height: $size__button_height;
+  width: $size__button_height;
+  border-radius: $size__standart-button_br;
+  background-color: $color__voiting_bg-hover;
+  transition: background-color 0.23s;
+
+  &:before {
+    content: '';
+    display: block;
+    height: $size__button_height;
+    width: $size__button_height;
+    background-color: $color__voiting_bg-active;
+    mask-image: url($icon);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.46s;
+  }
+  &:hover:before {
+    background-color: $color__voiting_text-active;
+  }
+
+  &:hover {
+    background-color: $color__voiting_bg-active;
+  }
+}

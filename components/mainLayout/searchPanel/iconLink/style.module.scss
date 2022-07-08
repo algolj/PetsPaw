@@ -1,0 +1,34 @@
+@import '../../../../styles/vars.scss';
+
+.icon-link {
+  display: inline-block;
+  background-color: $color__voiting_bg;
+  height: $size__search_height;
+  width: $size__search_height;
+  border-radius: $size__search-panel_br;
+  transition: background-color 0.23s;
+
+  &__icon {
+    display: block;
+    height: $size__search_height;
+    width: $size__search_height;
+    background-color: $color__voiting_text;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.46s;
+
+    &:active,
+    &_active {
+      background-color: $color__voiting_text-active;
+    }
+  }
+
+  &:hover {
+    background-color: $color__voiting_bg-hover;
+  }
+
+  &:active,
+  &_active {
+    background-color: $color__voiting_bg-active;
+  }
+}

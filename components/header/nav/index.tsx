@@ -36,7 +36,11 @@ const Nav: FC = () => {
           onClick={() => goToLink(path)}
         >
           <div
-            className={`${style.nav__picture} ${style['nav__picture_' + path]}`}
+            className={`${style.nav__picture} ${
+              style['nav__picture_' + path]
+            } ${
+              router.pathname.slice(1) === path && style.nav__picture_active
+            }`}
           ></div>
           <div
             className={`${style.nav__button} ${

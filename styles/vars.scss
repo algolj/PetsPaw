@@ -43,9 +43,12 @@ $color__voiting_text-alt: $color_seventh;
 // sizes
 //
 $size__header_height: 24px;
+$size__search_height: 60px;
 $size__darkmode_point: 16px;
 $size__darkmode_width: 44px;
 $size__nav-picture_height: 198px;
+$size__button_height: 40px;
+$size__search-panel_gap: 0.625rem;
 
 //text
 $size__text_button: 0.75rem;
@@ -63,8 +66,17 @@ $size__padding_home: 30px;
 $size__padding_header: 10.2%;
 
 //margins
+$size__margin_main: $size__padding_home;
+$size__margin_search-panel: 10px;
 $size__margin_header-settings: 24px;
 $size__margin_dark-mode: 4px;
+
+//border radius
+$size__standart-button_br: 10px;
+$size__search-panel_br: 20px;
+
+// border
+$size__search_br: 2px;
 
 //
 // var

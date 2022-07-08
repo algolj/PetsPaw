@@ -1,0 +1,11 @@
+@import '../../../styles/vars.scss';
+
+.search-panel {
+  display: flex;
+  gap: 0 $size__search-panel_gap;
+  margin-bottom: $size__margin_search-panel;
+
+  &_flex {
+    flex: 1;
+  }
+}

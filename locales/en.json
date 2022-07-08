@@ -7,5 +7,10 @@
   "voting": "voting",
   "breeds": "breeds",
   "gallery": "gallery",
-  "hugCat": "person trying to hug a cat"
+  "hugCat": "person trying to hug a cat",
+  "searchPlaceholder": "Search for breeds by name",
+  "search": "search",
+  "like": "like",
+  "dislike": "dislike",
+  "favorite": "favorite"
 }
