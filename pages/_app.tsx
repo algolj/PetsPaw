@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 
-import { store } from '../store/store';
+import { store } from '../store';
 
 import '../styles/reset-style.scss';
 import '../styles/globals.scss';
