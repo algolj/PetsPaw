@@ -7,7 +7,7 @@ const userKey = getUserKey();
 
 export const petsApi = createApi({
   reducerPath: 'petsApi',
-  tagTypes: ['pets', 'all-breeds', 'breeds', 'votes', 'favourites'],
+  tagTypes: ['pets', 'all-breeds', 'breed', 'breeds', 'votes', 'favourites'],
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.CAT_API,
     prepareHeaders: (headers) => {
@@ -37,6 +37,13 @@ export const petsApi = createApi({
     getAllBreeds: build.query({
       query: () => 'breeds',
       providesTags: ['all-breeds'],
+    }),
+    getBreed: build.query({
+      query: (params: { breed_id: string }) => ({
+        url: 'images/search',
+        params,
+      }),
+      providesTags: ['breed'],
     }),
     getBreeds: build.query({
       query: (
@@ -118,6 +125,7 @@ export const petsApi = createApi({
 export const {
   useGetGalleryQuery,
   useUploadImageMutation,
+  useGetBreedQuery,
   useGetBreedsQuery,
   useGetAllBreedsQuery,
   useGetSearchBreedsQuery,

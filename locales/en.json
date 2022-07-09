@@ -13,5 +13,6 @@
   "like": "like",
   "dislike": "dislike",
   "favorite": "favorite",
-  "limit": "Limit"
+  "limit": "Limit",
+  "noFound": "No item found"
 }

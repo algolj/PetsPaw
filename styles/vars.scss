@@ -49,6 +49,8 @@ $size__darkmode_width: 44px;
 $size__nav-picture_height: 198px;
 $size__button_height: 40px;
 $size__search-panel_gap: 0.625rem;
+$size__img-gallery_height: 140px;
+$size__gallery-desc_height: 34px;
 
 //text
 $size__text_button: 0.75rem;
@@ -63,7 +65,9 @@ $size__lh_header: 3.625rem;
 
 //padding
 $size__padding_home: 30px;
+$size__padding_gallery: 10px;
 $size__padding_header: 10.2%;
+$size__padding_no-item: 1.25rem;
 
 //margins
 $size__margin_main: $size__padding_home;

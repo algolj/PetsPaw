@@ -6,7 +6,7 @@ const useGetAllBreedsName = () => {
   const { data } = useGetAllBreedsQuery('');
   return [
     { name: 'All breeds', value: '' },
-    ...((data as IBreed[]) || []).map(({ name }) => ({ name, value: name })),
+    ...((data as IBreed[]) || []).map(({ name, id }) => ({ name, value: id })),
   ];
 };
 
