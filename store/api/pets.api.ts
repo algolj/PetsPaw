@@ -7,11 +7,11 @@ const userKey = getUserKey();
 
 export const petsApi = createApi({
   reducerPath: 'petsApi',
-  tagTypes: ['pets', 'breeds', 'votes', 'favourites'],
+  tagTypes: ['pets', 'all-breeds', 'breeds', 'votes', 'favourites'],
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.NEXT_PUBLIC_CAT_API,
+    baseUrl: process.env.CAT_API,
     prepareHeaders: (headers) => {
-      headers.set('x-api-key', process.env.NEXT_PUBLIC_CAT_API_KEY as string);
+      headers.set('x-api-key', process.env.CAT_API_KEY as string);
       return headers;
     },
   }),
@@ -34,6 +34,10 @@ export const petsApi = createApi({
     }),
 
     // breeds requests
+    getAllBreeds: build.query({
+      query: () => 'breeds',
+      providesTags: ['all-breeds'],
+    }),
     getBreeds: build.query({
       query: (
         params: Partial<{
@@ -115,6 +119,7 @@ export const {
   useGetGalleryQuery,
   useUploadImageMutation,
   useGetBreedsQuery,
+  useGetAllBreedsQuery,
   useGetSearchBreedsQuery,
   useGetFavouritesQuery,
   useAddFavouriteMutation,

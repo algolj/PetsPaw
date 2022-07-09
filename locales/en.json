@@ -12,5 +12,6 @@
   "search": "search",
   "like": "like",
   "dislike": "dislike",
-  "favorite": "favorite"
+  "favorite": "favorite",
+  "limit": "Limit"
 }

@@ -1,0 +1,25 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
+.page-panel {
+  display: flex;
+
+  align-items: center;
+  gap: 0 $size__text_button;
+  margin-bottom: $size__text_main;
+}
+
+.back-button {
+  @include standart-buttons('/assets/svg/back-white.svg');
+}
+
+.page-title {
+  @include panel-element;
+  width: auto;
+  padding: 0 $size__text_main;
+  font-size: $size__text_main;
+  background-color: $color__voiting_bg-active;
+  color: $color__voiting_text-active;
+  text-transform: uppercase;
+  user-select: none;
+}

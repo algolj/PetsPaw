@@ -1,4 +1,5 @@
 @import '../../../../styles/vars.scss';
+@import '../../../../styles/mixins.scss';
 
 .icon-link {
   display: inline-block;
@@ -9,18 +10,11 @@
   transition: background-color 0.23s;
 
   &__icon {
-    display: block;
-    height: $size__search_height;
-    width: $size__search_height;
-    background-color: $color__voiting_text;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    transition: background-color 0.46s;
-
-    &:active,
-    &_active {
-      background-color: $color__voiting_text-active;
-    }
+    @include icon-span(
+      $size__search_height,
+      $color__voiting_text,
+      $color__voiting_text-active
+    );
   }
 
   &:hover {
