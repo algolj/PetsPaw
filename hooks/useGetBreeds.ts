@@ -36,7 +36,8 @@ const useGetBreeds = () => {
     breeds = dataBreeds;
   }
 
-  if (filters.sort) breeds.sort(sort[filters.sort as 'a-b' | 'b-a']);
+  if (filters.sort)
+    breeds = [...breeds].sort(sort[filters.sort as 'a-b' | 'b-a']);
 
   return {
     breeds,

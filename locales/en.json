@@ -14,5 +14,12 @@
   "dislike": "dislike",
   "favorite": "favorite",
   "limit": "Limit",
-  "noFound": "No item found"
+  "noFound": "No item found",
+  "breedSlogan": "Family companion cat",
+  "temperament": "Temperament",
+  "kgs": "kgs",
+  "years": "years",
+  "origin": "Origin",
+  "weight": "Weight",
+  "lifeSpan": "Life span"
 }

@@ -7,17 +7,6 @@
   grid-auto-rows: $size__img-gallery_height;
   grid-gap: $size__text_second;
 
-  &__loader {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &__loader-spiner {
-    font-size: $size__text_second;
-    animation: rotate-spiner 1.75s ease-in-out 3s infinite;
-  }
-
   & > *:nth-child(1).image-gallery__empty {
     height: $size__search_height;
     padding-left: $size__padding_no-item;
@@ -59,18 +48,5 @@
   & > *:nth-child(20) {
     grid-column: span 1;
     grid-row: span 1;
-  }
-}
-
-@keyframes rotate-spiner {
-  0% {
-    transform: rotate(0deg) scale(2);
-  }
-  50% {
-    transform: rotate(180deg) scale(1);
-  }
-
-  100% {
-    transform: rotate(360deg) scale(2);
   }
 }

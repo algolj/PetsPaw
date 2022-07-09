@@ -5,7 +5,7 @@ const initialState: IBreedsFilter = {
   limit: 5,
   page: 0,
   breed: '',
-  sort: '',
+  sort: 'a-b',
 };
 
 const breedsFilterSlice = createSlice({

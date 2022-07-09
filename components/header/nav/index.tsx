@@ -25,7 +25,7 @@ const Nav: FC = () => {
     },
   ];
 
-  const goToLink = (path: string) => router.push(path);
+  const goToLink = (path: string) => router.push(`/${path}`);
 
   return (
     <nav className={style.nav}>

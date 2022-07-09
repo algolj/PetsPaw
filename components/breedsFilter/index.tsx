@@ -7,11 +7,7 @@ import PagePanel from '../pagePanel';
 import useGetAllBreedsName from '../../hooks/useGetAllBreedsName';
 import { useDispatch, useSelector } from 'react-redux';
 import { IStore } from '../../interfaces/store.interface';
-import {
-  changeBreed,
-  changeLimit,
-  changeSort,
-} from '../../store/slice/breedsFilter.slice';
+import { changeBreed, changeLimit, changeSort } from '../../store';
 
 const BreedsFilter: FC = () => {
   const filters = useSelector((state: IStore) => state.breedsFilter);
@@ -39,7 +35,7 @@ const BreedsFilter: FC = () => {
   };
 
   return (
-    <PagePanel title={locale.breeds}>
+    <PagePanel title={locale.breeds} href="breeds">
       <select
         className={`${style['sort-select']} ${style['sort-select_full-line']}`}
         value={filters.breed}

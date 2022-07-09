@@ -51,6 +51,11 @@ $size__button_height: 40px;
 $size__search-panel_gap: 0.625rem;
 $size__img-gallery_height: 140px;
 $size__gallery-desc_height: 34px;
+$size__breed-img_height: 360px;
+$size__breed-img-carusel_gap: 5px;
+$size__breed-name_padding-w: 40px;
+$size__breed-name_padding-h: 14px;
+$size__breed-info_margin: 46px;
 
 //text
 $size__text_button: 0.75rem;
@@ -68,12 +73,14 @@ $size__padding_home: 30px;
 $size__padding_gallery: 10px;
 $size__padding_header: 10.2%;
 $size__padding_no-item: 1.25rem;
+$size__padding_breed-info: 2.3rem;
 
 //margins
 $size__margin_main: $size__padding_home;
 $size__margin_search-panel: 10px;
 $size__margin_header-settings: 24px;
 $size__margin_dark-mode: 4px;
+$size__margin_breed-slogan: 1.75rem;
 
 //border radius
 $size__standart-button_br: 10px;

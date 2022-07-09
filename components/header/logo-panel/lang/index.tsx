@@ -9,7 +9,10 @@ const Lang: FC = () => {
   const router = useRouter();
 
   const changeLang = (e: ChangeEvent<HTMLSelectElement>) => {
-    router.push('', '', { locale: e.target.value });
+    router.push(router.asPath, router.asPath, {
+      ...router.query,
+      locale: e.target.value,
+    });
   };
 
   return (

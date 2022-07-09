@@ -1,5 +1,8 @@
 import { FC, ReactNode } from 'react';
+
 import useLocale from '../../hooks/useLocale';
+
+import Loader from '../loader';
 
 import style from './style.module.scss';
 
@@ -11,9 +14,7 @@ const ImageGallery: FC<{ children?: ReactNode; isLoading?: boolean }> = ({
   return (
     <>
       {isLoading ? (
-        <div className={style['image-gallery__loader']}>
-          <span className={style['image-gallery__loader-spiner']}>🐱</span>
-        </div>
+        <Loader />
       ) : (
         <div className={style['image-gallery']}>
           {children || (
