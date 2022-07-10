@@ -1,0 +1,83 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.card {
+  @include gallary-item-hover;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    z-index: 1;
+    height: $size__button_height;
+    width: $size__button_height;
+    border-radius: $size__standart-button_br;
+    background-color: $color__voiting_bg;
+    opacity: 0;
+    transition: opacity 0.23s;
+
+    &_favorite {
+      @include icon-link(
+        '/assets/svg/fav.svg',
+        $size__button_height,
+        $color__voiting_text,
+        $color__voiting_text
+      );
+
+      &_active {
+        @include icon-link(
+          '/assets/svg/fav-full.svg',
+          $size__button_height,
+          $color__voiting_text,
+          $color__voiting_text
+        );
+      }
+    }
+
+    &_dislike {
+      @include icon-link(
+        '/assets/svg/dislike.svg',
+        $size__button_height,
+        $color__voiting_text,
+        $color__voiting_text
+      );
+
+      &_active {
+        @include icon-link(
+          '/assets/svg/dislike.svg',
+          $size__button_height,
+          $color__voiting_text,
+          $color__voiting_text
+        );
+      }
+    }
+
+    &_like {
+      @include icon-link(
+        '/assets/svg/like.svg',
+        $size__button_height,
+        $color__voiting_text,
+        $color__voiting_text
+      );
+
+      &_active {
+        @include icon-link(
+          '/assets/svg/like.svg',
+          $size__button_height,
+          $color__voiting_text,
+          $color__voiting_text
+        );
+      }
+    }
+  }
+  &:hover > &__icon {
+    opacity: 1;
+  }
+}

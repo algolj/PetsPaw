@@ -2,19 +2,18 @@ import { useSelector } from 'react-redux';
 import { NextPage } from 'next';
 
 import useLocale from '../../hooks/useLocale';
+import useGetGallery from '../../hooks/useGetGallery';
 
 import GalleryFilter from '../../components/galleryFilter';
 import MainLayout from '../../components/mainLayout';
 import PagePanel from '../../components/pagePanel';
+import ImageGallery from '../../components/imageGallery';
+import FavoriteCard from '../../components/imageGallery/favoriteCard';
 
 import style from './style.module.scss';
 
-import useGetGallery from '../../hooks/useGetGallery';
-
 import { IStore } from '../../interfaces/store.interface';
 import { IGalleryParams } from '../../interfaces/galleryParams.interface';
-import ImageGallery from '../../components/imageGallery';
-import LikeCard from '../../components/imageGallery/likeCard';
 
 const GalleryPage: NextPage = () => {
   const locale = useLocale();
@@ -36,7 +35,7 @@ const GalleryPage: NextPage = () => {
       <GalleryFilter />
       <ImageGallery isLoading={isLoading}>
         {(pets || []).map(({ id, url }: { id: string; url: string }) => (
-          <LikeCard key={id} id={id} image={url} />
+          <FavoriteCard key={id} id={id} image={url} />
         ))}
       </ImageGallery>
     </MainLayout>

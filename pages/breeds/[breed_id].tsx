@@ -11,9 +11,9 @@ import Loader from '../../components/loader';
 import BreedInfo from '../../components/breedInfo';
 import MainLayout from '../../components/mainLayout';
 import PagePanel from '../../components/pagePanel';
+import NotFoud from '../../components/notFound';
 
 import style from './style.module.scss';
-import NotFoud from '../../components/notFound';
 
 const Breeds: NextPage = () => {
   const locale = useLocale();
@@ -32,7 +32,7 @@ const Breeds: NextPage = () => {
 
       <PagePanel title={locale.breeds} isSubTitle={true} href="breeds">
         <p className={style['breed-title']}>
-          {breed?.[0]?.breeds[0]?.id || locale.noFound}
+          {breed?.[0]?.breeds[0]?.id || (!isLoading ? locale.noFound : '')}
         </p>
       </PagePanel>
       {isLoading ? (

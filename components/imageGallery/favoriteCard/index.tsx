@@ -1,18 +1,20 @@
 import { FC, useEffect, useState } from 'react';
+
 import {
   useAddFavouriteMutation,
   useDeleteFavouriteMutation,
   useGetFavouritesQuery,
 } from '../../../store';
 
-import style from './style.module.scss';
+import Card from '../card';
 
-interface ILikeCardProps {
+interface IFavoriteCardProps {
   id: string;
   image: string;
+  favorite_id?: number;
 }
 
-const LikeCard: FC<ILikeCardProps> = ({ id, image }) => {
+const FavoriteCard: FC<IFavoriteCardProps> = ({ id, image, favorite_id }) => {
   const { data: favorites, isLoading } = useGetFavouritesQuery('');
 
   const [isFavorite, setIsFavorite] = useState(false);
@@ -23,8 +25,10 @@ const LikeCard: FC<ILikeCardProps> = ({ id, image }) => {
   const changeFavorite = () => {
     if (isFavorite) {
       deleteFavorite(
-        favorites.find(({ image_id }: { image_id: string }) => image_id === id)
-          .id,
+        favorite_id ||
+          favorites.find(
+            ({ image_id }: { image_id: string }) => image_id === id,
+          ).id,
       );
     } else {
       addFavorite(id);
@@ -40,18 +44,13 @@ const LikeCard: FC<ILikeCardProps> = ({ id, image }) => {
   }, [favorites, id, isLoading]);
 
   return (
-    <button
-      className={style['like-link']}
-      style={{ backgroundImage: `url(${image})` }}
-      onClick={changeFavorite}
-    >
-      <span
-        className={`${style['like-link__like']} ${
-          isFavorite && style['like-link__like_favorite']
-        }`}
-      ></span>
-    </button>
+    <Card
+      image={image}
+      isActive={isFavorite}
+      type={'favorite'}
+      change={changeFavorite}
+    />
   );
 };
 
-export default LikeCard;
+export default FavoriteCard;
