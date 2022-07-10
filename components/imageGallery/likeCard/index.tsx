@@ -33,7 +33,9 @@ const LikeCard: FC<ILikeCardProps> = ({ id, image }) => {
 
   useEffect(() => {
     setIsFavorite(
-      favorites.some(({ image_id }: { image_id: string }) => image_id === id),
+      (favorites || []).some(
+        ({ image_id }: { image_id: string }) => image_id === id,
+      ),
     );
   }, [favorites, id, isLoading]);
 
