@@ -29,11 +29,7 @@
 }
 
 .sort-select {
-  @include panel-element;
-  width: auto;
-  background-color: $color__voiting_bg-alt;
-  color: $color__voiting_text-alt;
-  padding: 0 $size__standart-button_br;
+  @include select-style;
 
   &_full-line {
     flex: 1;

@@ -1,0 +1,46 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
+.gallery-filter {
+  display: grid;
+  padding: $size__padding_gallery-filter;
+  border-radius: $size__search-panel_br;
+  background-color: $color__bg_main;
+  grid-template-columns: 1fr 0.8fr auto;
+  grid-template-areas: 'order type type' 'breed limit upload';
+  gap: $size__gl-filter-gap_h $size__gl-filter-gap_w;
+
+  &__title {
+    margin: $size__margin_gallery-filter $size__margin_search-panel;
+    font-size: $size__text_button;
+    color: $color__text_second;
+    text-transform: uppercase;
+  }
+
+  &__filter {
+    @include select-style;
+    width: 100%;
+    background-color: $color__bg_substrate;
+    color: $color__text_main;
+    cursor: pointer;
+  }
+
+  &_order {
+    grid-area: order;
+  }
+  &_type {
+    grid-area: type;
+  }
+  &_breed {
+    grid-area: breed;
+  }
+  &_limit {
+    grid-area: limit;
+  }
+  &_upload {
+    grid-area: upload;
+    @include standart-buttons('/assets/svg/update.svg');
+    background-color: $color__bg_substrate;
+    align-self: flex-end;
+  }
+}

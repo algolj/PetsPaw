@@ -7,6 +7,14 @@
   border-radius: $size__standart-button_br;
 }
 
+@mixin select-style {
+  @include panel-element;
+  width: auto;
+  background-color: $color__voiting_bg-alt;
+  color: $color__voiting_text-alt;
+  padding: 0 $size__standart-button_br;
+}
+
 @mixin icon-span($size, $first-color, $hover-color) {
   display: block;
   height: $size;
@@ -71,13 +79,19 @@
   }
 }
 
-@mixin page-title {
+@mixin panel-button {
   @include panel-element;
   width: auto;
   padding: 0 $size__text_main;
   font-size: $size__text_main;
-  background-color: $color__voiting_bg-active;
-  color: $color__voiting_text-active;
   text-transform: uppercase;
   user-select: none;
+  background-color: $color__voiting_bg-hover;
+  color: $color__voiting_bg-active;
+}
+
+@mixin page-title {
+  @include panel-button;
+  background-color: $color__voiting_bg-active;
+  color: $color__voiting_text-active;
 }

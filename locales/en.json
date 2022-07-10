@@ -22,5 +22,17 @@
   "origin": "Origin",
   "weight": "Weight",
   "lifeSpan": "Life span",
-  "searchResult": "Search results for"
+  "searchResult": "Search results for",
+  "upload": "upload",
+  "order": "order",
+  "type": "type",
+  "breed": "breed",
+  "random": "Random",
+  "desc": "Desc",
+  "asc": "Asc",
+  "all": "All",
+  "static": "Static",
+  "animated": "Animated",
+  "itemsPage": "items per page",
+  "newPage": "new page"
 }

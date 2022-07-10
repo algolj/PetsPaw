@@ -1,0 +1,45 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.like-link {
+  @include gallary-item-hover;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__like {
+    z-index: 1;
+    height: $size__button_height;
+    width: $size__button_height;
+    border-radius: $size__standart-button_br;
+    background-color: $color__voiting_bg;
+    opacity: 0;
+    transition: opacity 0.23s;
+
+    @include icon-link(
+      '/assets/svg/fav.svg',
+      $size__button_height,
+      $color__voiting_text,
+      $color__voiting_text
+    );
+
+    &_favorite {
+      @include icon-link(
+        '/assets/svg/fav-full.svg',
+        $size__button_height,
+        $color__voiting_text,
+        $color__voiting_text
+      );
+    }
+  }
+  &:hover > &__like {
+    opacity: 1;
+  }
+}

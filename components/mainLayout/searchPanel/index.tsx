@@ -20,7 +20,7 @@ const SearchPanel: FC = () => {
     if (currentLink === 'search' && router?.query?.hasOwnProperty('q')) {
       setSearch(router.query.q as string);
     }
-  }, [router]);
+  }, [currentLink, router]);
 
   const iconLinks = [
     {
