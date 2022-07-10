@@ -1,0 +1,27 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
+.page-panel {
+  display: flex;
+
+  align-items: center;
+  gap: 0 $size__text_button;
+  margin-bottom: $size__text_main;
+}
+
+.back-button {
+  @include standart-buttons('/assets/svg/back-white.svg');
+}
+
+.page-title {
+  @include page-title;
+
+  &_secondary {
+    color: $color__voiting_text;
+    background-color: $color__voiting_bg-hover;
+    transition: color 0.23s, background-color 0.23s;
+    &:hover {
+      @include page-title;
+    }
+  }
+}

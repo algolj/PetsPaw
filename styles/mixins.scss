@@ -1,0 +1,83 @@
+@import './vars.scss';
+
+@mixin panel-element {
+  height: $size__button_height;
+  line-height: $size__button_height;
+  width: $size__button_height;
+  border-radius: $size__standart-button_br;
+}
+
+@mixin icon-span($size, $first-color, $hover-color) {
+  display: block;
+  height: $size;
+  width: $size;
+  background-color: $first-color;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: background-color 0.46s;
+
+  &:active,
+  &_active {
+    background-color: $hover-color;
+  }
+}
+
+@mixin icon-link($icon, $size, $first-color, $hover-color) {
+  &:before {
+    content: '';
+    display: block;
+    height: $size;
+    width: $size;
+    background-color: $first-color;
+    mask-image: url($icon);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.46s;
+  }
+  &:hover:before {
+    background-color: $hover-color;
+  }
+}
+
+@mixin standart-buttons($icon) {
+  @include panel-element;
+  @include icon-link(
+    $icon,
+    $size__button_height,
+    $color__voiting_bg-active,
+    $color__voiting_text-active
+  );
+  background-color: $color__voiting_bg-hover;
+  transition: background-color 0.23s;
+
+  &:hover {
+    background-color: $color__voiting_bg-active;
+  }
+}
+
+@mixin gallary-item-hover {
+  &::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    border-radius: $size__search-panel_br;
+    background-color: transparent;
+    transition: background-color 0.23s;
+  }
+
+  &:hover::before {
+    background-color: transparentize($color__voiting_bg-active, 0.4);
+  }
+}
+
+@mixin page-title {
+  @include panel-element;
+  width: auto;
+  padding: 0 $size__text_main;
+  font-size: $size__text_main;
+  background-color: $color__voiting_bg-active;
+  color: $color__voiting_text-active;
+  text-transform: uppercase;
+  user-select: none;
+}

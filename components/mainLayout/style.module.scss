@@ -1,0 +1,32 @@
+@import '../../styles/vars.scss';
+
+.main-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: $size__margin_main;
+}
+
+.main-container {
+  height: 100%;
+  border-radius: $size__search-panel_br;
+  padding: $size__text_second;
+  background-color: $color__voiting_bg;
+  overflow: hidden;
+}
+
+.main-wrapper {
+  height: 100%;
+  overflow: auto;
+
+  &::-webkit-scrollbar-thumb {
+    display: block;
+    background-color: red;
+    border-radius: 3em;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0em;
+    background-color: black;
+  }
+}

@@ -7,5 +7,19 @@
   "voting": "voting",
   "breeds": "breeds",
   "gallery": "gallery",
-  "hugCat": "person trying to hug a cat"
+  "hugCat": "person trying to hug a cat",
+  "searchPlaceholder": "Search for breeds by name",
+  "search": "search",
+  "like": "like",
+  "dislike": "dislike",
+  "favorite": "favorite",
+  "limit": "Limit",
+  "noFound": "No item found",
+  "breedSlogan": "Family companion cat",
+  "temperament": "Temperament",
+  "kgs": "kgs",
+  "years": "years",
+  "origin": "Origin",
+  "weight": "Weight",
+  "lifeSpan": "Life span"
 }
