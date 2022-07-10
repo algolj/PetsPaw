@@ -13,6 +13,7 @@ import MainLayout from '../../components/mainLayout';
 import PagePanel from '../../components/pagePanel';
 
 import style from './style.module.scss';
+import NotFoud from '../../components/notFound';
 
 const Breeds: NextPage = () => {
   const locale = useLocale();
@@ -30,11 +31,13 @@ const Breeds: NextPage = () => {
       </Head>
 
       <PagePanel title={locale.breeds} isSubTitle={true} href="breeds">
-        <p className={style['breed-title']}>{breed?.[0].breeds[0].id}</p>
+        <p className={style['breed-title']}>
+          {breed?.[0]?.breeds[0]?.id || locale.noFound}
+        </p>
       </PagePanel>
       {isLoading ? (
         <Loader />
-      ) : (
+      ) : breed?.[0]?.breeds[0] ? (
         <>
           <div className={style['breed-image__container']}>
             <Image
@@ -53,6 +56,8 @@ const Breeds: NextPage = () => {
           </div>
           <BreedInfo {...breed?.[0].breeds[0]} />
         </>
+      ) : (
+        <NotFoud />
       )}
     </MainLayout>
   );

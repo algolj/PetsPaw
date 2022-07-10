@@ -1,0 +1,15 @@
+@import '../../styles/vars.scss';
+
+.not-found {
+  height: $size__search_height;
+  width: 100%;
+  padding-left: $size__padding_no-item;
+  grid-column: span 3 !important;
+  line-height: $size__search_height;
+  border-radius: $size__search-panel_br;
+  font-size: $size__text_main;
+  color: $color__text_second;
+  background-color: $color__bg_main;
+  user-select: none;
+  display: block;
+}
