@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { FC, useEffect, useState } from 'react';
+
 import useLocale from '../../../hooks/useLocale';
 
 import IconLink from './iconLink';
@@ -26,17 +27,17 @@ const SearchPanel: FC = () => {
     {
       name: locale.like,
       img: '/assets/svg/like.svg',
-      path: 'like',
+      path: 'likes',
     },
     {
       name: locale.favorite,
       img: '/assets/svg/fav.svg',
-      path: 'favorite',
+      path: 'favorites',
     },
     {
       name: locale.dislike,
       img: '/assets/svg/dislike.svg',
-      path: 'dislike',
+      path: 'dislikes',
     },
   ];
 
