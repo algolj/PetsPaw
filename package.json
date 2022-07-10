@@ -9,7 +9,7 @@
     "lint-check": "eslint . --ext ts --ext tsx --ext js",
     "lint-fix": "next lint -- --fix",
     "prettier-check": "prettier --check .",
-    "prettier-fix": "prettier --write \"{components,interfaces,utils,hooks,store,locales,pages,styles}/**/*.{ts,tsx,js,jsx,scss,css,json,html}\"",
+    "prettier-fix": "prettier --write \"{components,constants,interfaces,utils,hooks,store,locales,pages,styles}/**/*.{ts,tsx,js,jsx,scss,css,json,html}\"",
     "ts-check": "tsc --pretty --noEmit",
     "prepare": "husky install"
   },

@@ -5,15 +5,17 @@ import { ISearchBreeds } from '../../interfaces/searchBreeds.interface';
 
 import getUserKey from '../../utils/getUserKey';
 
+import { constants } from '../../constants';
+
 const userKey = getUserKey();
 
 export const petsApi = createApi({
   reducerPath: 'petsApi',
   tagTypes: ['pets', 'all-breeds', 'breed', 'breeds', 'votes', 'favourites'],
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://api.thecatapi.com/v1/',
+    baseUrl: constants.API_URL,
     prepareHeaders: (headers) => {
-      headers.set('x-api-key', 'd49f1049-a767-4757-828d-c1aadac129ba');
+      headers.set('x-api-key', constants.API_KEY);
       return headers;
     },
   }),

@@ -8,6 +8,7 @@ import useGetAllBreedsName from '../../hooks/useGetAllBreedsName';
 import { useDispatch, useSelector } from 'react-redux';
 import { IStore } from '../../interfaces/store.interface';
 import { changeBreed, changeLimit, changeSort } from '../../store';
+import { constants } from '../../constants';
 
 const BreedsFilter: FC = () => {
   const filters = useSelector((state: IStore) => state.breedsFilter);
@@ -16,8 +17,6 @@ const BreedsFilter: FC = () => {
   const locale = useLocale();
 
   const breedsName = useGetAllBreedsName();
-
-  const itemsLimit = [5, 10, 15, 20];
 
   const sortBy = [
     {
@@ -52,7 +51,7 @@ const BreedsFilter: FC = () => {
         value={filters.limit}
         onChange={(e) => dispatch(changeLimit(e.target.value))}
       >
-        {itemsLimit.map((limit) => (
+        {constants.ITEMS_LIMIT.map((limit) => (
           <option key={limit} value={limit}>
             {locale.limit}: {limit}
           </option>
