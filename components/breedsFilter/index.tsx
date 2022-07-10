@@ -31,7 +31,7 @@ const BreedsFilter: FC = () => {
   ];
 
   const changeCurrentSort = (sort: string) => {
-    dispatch(changeSort(sort === filters.sort ? '' : sort));
+    dispatch(changeSort(sort));
   };
 
   return (

@@ -26,7 +26,7 @@ const Breeds: NextPage = () => {
   return (
     <MainLayout>
       <Head>
-        <title>{breed?.[0].breeds[0].name} · PetsPaw</title>
+        <title>breed · PetsPaw</title>
       </Head>
 
       <PagePanel title={locale.breeds} isSubTitle={true} href="breeds">

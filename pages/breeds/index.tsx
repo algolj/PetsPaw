@@ -14,14 +14,12 @@ import style from './style.module.scss';
 import useGetBreeds from '../../hooks/useGetBreeds';
 
 const Breeds: NextPage = () => {
-  const locale = useLocale();
-
   const { breeds, isLoading } = useGetBreeds();
 
   return (
     <MainLayout>
       <Head>
-        <title>{locale.breeds} · PetsPaw</title>
+        <title>breeds · PetsPaw</title>
       </Head>
       <BreedsFilter />
       <ImageGallery isLoading={isLoading}>
