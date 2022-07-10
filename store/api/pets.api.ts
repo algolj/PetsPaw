@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { IGalleryReqParams } from '../../interfaces/galleryReqParams.interface';
+import { ISearchBreeds } from '../../interfaces/searchBreeds.interface';
+
 import getUserKey from '../../utils/getUserKey';
 
 const userKey = getUserKey();
@@ -9,9 +11,9 @@ export const petsApi = createApi({
   reducerPath: 'petsApi',
   tagTypes: ['pets', 'all-breeds', 'breed', 'breeds', 'votes', 'favourites'],
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.CAT_API,
+    baseUrl: 'https://api.thecatapi.com/v1/',
     prepareHeaders: (headers) => {
-      headers.set('x-api-key', process.env.CAT_API_KEY as string);
+      headers.set('x-api-key', 'd49f1049-a767-4757-828d-c1aadac129ba');
       return headers;
     },
   }),
@@ -31,6 +33,10 @@ export const petsApi = createApi({
         method: 'POST',
         body: { file, sub_id: userKey },
       }),
+    }),
+
+    getImage: build.query({
+      query: (img_id: string) => `images/${img_id}`,
     }),
 
     // breeds requests
@@ -59,9 +65,9 @@ export const petsApi = createApi({
       providesTags: ['breeds'],
     }),
     getSearchBreeds: build.query({
-      query: (q: string) => ({
-        url: 'breeds',
-        params: { q },
+      query: (params: ISearchBreeds) => ({
+        url: 'breeds/search',
+        params,
       }),
       providesTags: ['breeds'],
     }),
@@ -126,6 +132,7 @@ export const {
   useGetGalleryQuery,
   useUploadImageMutation,
   useGetBreedQuery,
+  useGetImageQuery,
   useGetBreedsQuery,
   useGetAllBreedsQuery,
   useGetSearchBreedsQuery,

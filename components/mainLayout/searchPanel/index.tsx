@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import useLocale from '../../../hooks/useLocale';
 
 import IconLink from './iconLink';
@@ -12,7 +12,15 @@ const SearchPanel: FC = () => {
 
   const router = useRouter();
 
+  const [search, setSearch] = useState('');
+
   const currentLink = router.pathname.slice(1);
+
+  useEffect(() => {
+    if (currentLink === 'search' && router?.query?.hasOwnProperty('q')) {
+      setSearch(router.query.q as string);
+    }
+  }, [router]);
 
   const iconLinks = [
     {
@@ -37,8 +45,9 @@ const SearchPanel: FC = () => {
       <div className={style['search-panel_flex']}>
         <Search
           placeholder={locale.searchPlaceholder}
-          searchLink="search"
+          searchLink="/search"
           currentLink={currentLink === 'search'}
+          startSearchValue={search}
         />
       </div>
       {iconLinks.map((params) => (

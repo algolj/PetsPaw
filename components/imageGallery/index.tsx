@@ -14,7 +14,9 @@ const ImageGallery: FC<{ children?: ReactNode; isLoading?: boolean }> = ({
       {isLoading ? (
         <Loader />
       ) : (
-        <div className={style['image-gallery']}>{children || <NotFoud />}</div>
+        <div className={style['image-gallery']}>
+          {`${children}` ? children : <NotFoud />}
+        </div>
       )}
     </>
   );
