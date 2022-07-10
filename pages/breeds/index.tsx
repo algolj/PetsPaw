@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { NextPage } from 'next';
 
-import useLocale from '../../hooks/useLocale';
-
 import MainLayout from '../../components/mainLayout';
 import BreedsFilter from '../../components/breedsFilter';
 import ImageGallery from '../../components/imageGallery';
