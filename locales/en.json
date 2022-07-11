@@ -37,5 +37,20 @@
   "newPage": "new page",
   "imageID": "Image ID",
   "addTo": "was added to",
-  "cat": "cat"
+  "cat": "cat",
+  "uploadTitle": "Upload a .jpg or .png Cat Image",
+  "uploadDesc1": "Any uploads must comply with the ",
+  "uploadDesc2": "upload guidelines ",
+  "uploadDesc3": "or face deletion.",
+  "fileDaD1": "Drag here ",
+  "fileDaD2": "your file or ",
+  "fileDaD3": "Click here",
+  "fileDaD4": "to upload",
+  "noFileSelected": "No file selected",
+  "drop": "Let the cat go!",
+  "imageName": "Image File Name",
+  "uploadPhoto": "upload photo",
+  "catLoad": "Thanks for the Upload - Cat found!",
+  "catNotFound": "No Cat found - try a different one",
+  "loading": "UPLOADING"
 }

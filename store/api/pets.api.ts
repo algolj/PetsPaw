@@ -30,10 +30,10 @@ export const petsApi = createApi({
     }),
 
     uploadImage: build.mutation({
-      query: (file) => ({
+      query: (body) => ({
         url: 'images/upload',
         method: 'POST',
-        body: { file, sub_id: userKey },
+        body,
       }),
     }),
 

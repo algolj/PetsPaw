@@ -14,31 +14,45 @@ import style from './style.module.scss';
 
 import { IStore } from '../../interfaces/store.interface';
 import { IGalleryParams } from '../../interfaces/galleryParams.interface';
+import Upload from '../../components/upload';
+import { useState } from 'react';
+import Head from 'next/head';
 
 const GalleryPage: NextPage = () => {
   const locale = useLocale();
 
   const filters = useSelector((state: IStore) => state.galleryFilter);
 
+  const [uploadVisible, setUploadVisible] = useState(false);
+
   const { data: pets, isLoading } = useGetGallery(
     filters as unknown as IGalleryParams,
   );
 
   return (
-    <MainLayout>
-      <PagePanel title={locale.gallery} href="search">
-        <button className={style['upload-button']}>
-          <span className={style['upload-button__icon']}></span>
-          <span>{locale.upload}</span>
-        </button>
-      </PagePanel>
-      <GalleryFilter />
-      <ImageGallery isLoading={isLoading}>
-        {(pets || []).map(({ id, url }: { id: string; url: string }) => (
-          <FavoriteCard key={id} id={id} image={url} />
-        ))}
-      </ImageGallery>
-    </MainLayout>
+    <>
+      <Head>
+        <title>Gallery · PetsPaw</title>
+      </Head>
+      <MainLayout>
+        <PagePanel title={locale.gallery} href="search">
+          <button
+            className={style['upload-button']}
+            onClick={() => setUploadVisible(true)}
+          >
+            <span className={style['upload-button__icon']}></span>
+            <span>{locale.upload}</span>
+          </button>
+        </PagePanel>
+        <GalleryFilter />
+        <ImageGallery isLoading={isLoading}>
+          {(pets || []).map(({ id, url }: { id: string; url: string }) => (
+            <FavoriteCard key={id} id={id} image={url} />
+          ))}
+        </ImageGallery>
+      </MainLayout>
+      <Upload visible={uploadVisible} changeVisible={setUploadVisible} />
+    </>
   );
 };
 

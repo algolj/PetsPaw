@@ -21,12 +21,12 @@
 
   &::-webkit-scrollbar-thumb {
     display: block;
-    background-color: red;
+    background-color: $color__bg_main;
     border-radius: 3em;
   }
 
   &::-webkit-scrollbar {
     width: 0em;
-    background-color: black;
+    background-color: $color__bg_substrate;
   }
 }
