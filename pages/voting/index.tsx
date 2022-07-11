@@ -9,8 +9,6 @@ import PagePanel from '../../components/pagePanel';
 import useGetLikesOrDislikes from '../../hooks/useGetLikesOrDislikes';
 import useLocale from '../../hooks/useLocale';
 
-import IImageRes from '../../interfaces/imageRes.interface';
-
 import { useGetFavouritesQuery, useGetVoteForQuery } from '../../store';
 import VoteBoard from './voteBoard';
 

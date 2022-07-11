@@ -12,7 +12,7 @@ const useGetLikesOrDislikes = (type: 'likes' | 'dislikes') => {
         type === 'likes' ? value : !value,
       ),
     );
-  }, [allVotes]);
+  }, [allVotes, type]);
 
   return {
     votes,

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import { NextPage } from 'next';
 
 import useLocale from '../../hooks/useLocale';
