@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import { useState } from 'react';
 
 import ActivityLogs from '../../components/activityLogs';
 import ImageContainer from '../../components/imageContainer';
@@ -15,9 +14,7 @@ import VoteBoard from './voteBoard';
 const Voting: NextPage = () => {
   const locale = useLocale();
 
-  const [changeImage, setChangeImage] = useState(Math.random());
-
-  const { data: voteImage } = useGetVoteForQuery(changeImage);
+  const { data: voteImage, refetch: voteRefetch } = useGetVoteForQuery('');
 
   const { votes: likes } = useGetLikesOrDislikes('likes');
 
@@ -29,10 +26,7 @@ const Voting: NextPage = () => {
     <MainLayout>
       <PagePanel title={locale.voting} href="voting" />
       <ImageContainer image={voteImage?.[0].url} alt={locale.cat}>
-        <VoteBoard
-          imageId={voteImage?.[0].id}
-          changePicture={() => setChangeImage(Math.random())}
-        />
+        <VoteBoard imageId={voteImage?.[0].id} changePicture={voteRefetch} />
       </ImageContainer>
       <div style={{ marginTop: 55 }}>
         <ActivityLogs like={likes} dislike={dislikes} favorite={favorites} />
