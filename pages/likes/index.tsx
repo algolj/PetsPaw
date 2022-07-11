@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
-import { useEffect, useState } from 'react';
 
 import MainLayout from '../../components/mainLayout';
 import PagePanel from '../../components/pagePanel';
@@ -9,19 +8,12 @@ import ActivityLogs from '../../components/activityLogs';
 import LikeDislikeCard from '../../components/imageGallery/LikeDislikeCard';
 
 import useLocale from '../../hooks/useLocale';
-
-import { useGetVotesQuery } from '../../store';
+import useGetLikesOrDislikes from '../../hooks/useGetLikesOrDislikes';
 
 const LikesPage: NextPage = () => {
   const locale = useLocale();
 
-  const { data: allVotes, isLoading } = useGetVotesQuery('');
-
-  const [likes, setLikes] = useState([]);
-
-  useEffect(() => {
-    setLikes((allVotes || []).filter(({ value }: { value: number }) => value));
-  }, [allVotes]);
+  const { votes: likes, isLoading } = useGetLikesOrDislikes('likes');
 
   return (
     <MainLayout>

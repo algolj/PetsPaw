@@ -14,6 +14,7 @@ import PagePanel from '../../components/pagePanel';
 import NotFoud from '../../components/notFound';
 
 import style from './style.module.scss';
+import ImageContainer from '../../components/imageContainer';
 
 const Breeds: NextPage = () => {
   const locale = useLocale();
@@ -39,13 +40,10 @@ const Breeds: NextPage = () => {
         <Loader />
       ) : breed?.[0]?.breeds[0] ? (
         <>
-          <div className={style['breed-image__container']}>
-            <Image
-              className={style['breed-image']}
-              src={breed?.[0].url || '/'}
-              layout="fill"
-              alt={breed?.[0].breeds[0].name}
-            />
+          <ImageContainer
+            image={breed?.[0].url}
+            alt={breed?.[0].breeds[0].name}
+          >
             <div className={style.carousel}>
               {Array(5)
                 .fill('')
@@ -53,7 +51,7 @@ const Breeds: NextPage = () => {
                   <span className={style.carousel__item} key={i}></span>
                 ))}
             </div>
-          </div>
+          </ImageContainer>
           <BreedInfo {...breed?.[0].breeds[0]} />
         </>
       ) : (

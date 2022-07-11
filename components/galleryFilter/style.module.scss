@@ -4,6 +4,7 @@
 .gallery-filter {
   display: grid;
   padding: $size__padding_gallery-filter;
+  margin-bottom: $size__margin_gallery-filter_bt;
   border-radius: $size__search-panel_br;
   background-color: $color__bg_main;
   grid-template-columns: 1fr 0.8fr auto;
