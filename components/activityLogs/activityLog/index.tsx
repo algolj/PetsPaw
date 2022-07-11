@@ -19,9 +19,9 @@ const ActivityLog: FC<IActivityLogProps> = ({
 
   const name = `log__icon_${type}`;
 
-  const time = `${new Date(createdAt).getHours()}:${new Date(
-    createdAt,
-  ).getMinutes()}`;
+  const time = `${new Date(createdAt).getHours()}:${String(
+    new Date(createdAt).getMinutes(),
+  ).padStart(2, '0')}`;
 
   return (
     <li className={style.log}>

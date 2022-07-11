@@ -95,3 +95,16 @@
   background-color: $color__voiting_bg-active;
   color: $color__voiting_text-active;
 }
+
+@mixin vote-button-color($color) {
+  background-color: $color;
+  transition: background-color 0.23s;
+
+  &:hover {
+    background-color: transparentize($color, 0.7);
+  }
+
+  &:active {
+    background-color: $color;
+  }
+}
