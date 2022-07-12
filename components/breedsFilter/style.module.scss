@@ -31,6 +31,10 @@
 .sort-select {
   @include select-style;
 
+  &:focus {
+    border: var(--color__voiting_bg-hover) solid $size__search_br;
+  }
+
   &_full-line {
     flex: 1;
   }
