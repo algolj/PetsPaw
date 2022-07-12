@@ -1,0 +1,20 @@
+@import '../../../../styles/vars.scss';
+
+.lang {
+  height: $size__header_height;
+  padding: 0.21em;
+  margin-left: $size__margin_header-settings;
+  border-radius: calc($size__header_height/2);
+  background-color: var(--color__voiting_bg-hover);
+  color: $color__voiting_text;
+  cursor: pointer;
+
+  &_dark {
+    background: transparentize($color__voiting_bg-hover, 0.8);
+  }
+
+  &__item {
+    background-color: $color__voiting_bg;
+    color: $color__voiting_text-alt;
+  }
+}

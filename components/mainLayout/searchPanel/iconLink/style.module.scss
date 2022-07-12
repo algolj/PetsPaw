@@ -1,0 +1,28 @@
+@import '../../../../styles/vars.scss';
+@import '../../../../styles/mixins.scss';
+
+.icon-link {
+  display: inline-block;
+  height: $size__search_height;
+  width: $size__search_height;
+  border-radius: $size__search-panel_br;
+  transition: background-color 0.23s;
+  background-color: var(--color__bg_substrate);
+
+  &__icon {
+    @include icon-span(
+      $size__search_height,
+      $color__voiting_text,
+      $color__voiting_text-active
+    );
+  }
+
+  &:hover {
+    background-color: $color__voiting_bg-hover;
+  }
+
+  &:active,
+  &_active {
+    background-color: $color__voiting_bg-active;
+  }
+}

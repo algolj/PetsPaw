@@ -1,0 +1,57 @@
+@import '../../styles/vars.scss';
+
+.breed-info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'title title'
+    'slogan slogan'
+    'temp origin'
+    'temp weight'
+    'temp life';
+  margin-top: $size__breed-info_margin;
+  border: var(--color__voiting_bg-hover) solid $size__search_br;
+  border-radius: $size__search-panel_br;
+  padding: $size__padding_breed-info;
+
+  &__title-container {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    display: inline-block;
+    margin-top: calc(
+      -1 * ($size__breed-name_padding-h + $size__text_title/2 +
+            $size__padding_breed-info)
+    );
+    padding: $size__breed-name_padding-h $size__breed-name_padding-w;
+    border-radius: $size__search-panel_br;
+    background-color: var(--color__br_card);
+    font-size: $size__text_title;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__slogan {
+    grid-area: slogan;
+    margin-bottom: $size__margin_breed-slogan;
+    color: $color__text_second;
+    font-size: $size__text_second;
+    text-align: center;
+  }
+
+  &__feature-title {
+    font-weight: 500;
+    font-size: $size__text_main;
+    float: left;
+  }
+
+  &__feature {
+    display: block;
+    font-size: $size__text_main;
+    color: $color__text_second;
+    margin-bottom: $size__text_main;
+  }
+}

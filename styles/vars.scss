@@ -1,0 +1,113 @@
+//
+// color
+//
+
+$color_first: #f8f8f7;
+$color_second: #fbe0dc;
+$color_third: #ffffff;
+$color_fourth: #ff868e;
+$color_fifth: #97eab9;
+$color_sixth: #ffd280;
+$color_seventh: #8c8c8c;
+
+//background
+$color__bg_main: var(--color__bg_main);
+$color__bg_home: var(--color__bg_home);
+$color__bg_substrate: var(--color__bg_substrate);
+
+//text
+$color__text_main: var(--color__text_main);
+$color__text_second: $color_seventh;
+$color__text_alt: $color_third;
+
+//menu
+$color__menu_vote: #b4b7ff;
+$color__menu_breeds: $color_fifth;
+$color__menu_gallery: $color_sixth;
+
+//voiting
+$color__voiting_like: $color_fifth;
+$color__voiting_favorite: $color_fourth;
+$color__voiting_dislike: $color_sixth;
+
+//button
+$color__voiting_bg: $color_third;
+$color__voiting_bg-hover: #fbe0dc;
+$color__voiting_bg-active: $color_fourth;
+$color__voiting_text: $color_fourth;
+$color__voiting_text-active: $color_third;
+$color__voiting_text-alt: $color_seventh;
+
+//
+// sizes
+//
+$size__header_height: 24px;
+$size__search_height: 60px;
+$size__darkmode_point: 16px;
+$size__darkmode_width: 44px;
+$size__nav-picture_height: 198px;
+$size__button_height: 40px;
+$size__search-panel_gap: 0.625rem;
+$size__img-gallery_height: 140px;
+$size__gallery-desc_height: 34px;
+$size__breed-img_height: 360px;
+$size__breed-img-carusel_gap: 5px;
+$size__breed-name_padding-w: 40px;
+$size__breed-name_padding-h: 14px;
+$size__breed-info_margin: 46px;
+$size__gl-filter-gap_h: 15px;
+$size__gl-filter-gap_w: 20px;
+$size__vote-board_height: 80px;
+$size__vote-board_width: 248px;
+$size__upload_height: 320px;
+
+//text
+$size__text_button: 0.75rem;
+$size__text_main: 1rem;
+$size__text_second: 1.25rem;
+$size__text_title: 2.25rem;
+$size__text_header: 2.75rem;
+
+//line height
+$size__lh_text: 1.8rem;
+$size__lh_header: 3.625rem;
+
+//padding
+$size__padding_home: 30px;
+$size__padding_gallery: 10px;
+$size__padding_header: 10.2%;
+$size__padding_no-item: 1.25rem;
+$size__padding_breed-info: 2.3rem;
+$size__padding_gallery-filter: 20px;
+$size__padding_log: 0.875rem;
+$size__padding_dad_h: 20px;
+$size__padding_dad_w: 45px;
+$size__padding_upload_h: 0.9rem;
+$size__padding_upload_w: 2rem;
+
+//margins
+$size__margin_main: $size__padding_home;
+$size__margin_search-panel: 10px;
+$size__margin_gallery-filter: 6px;
+$size__margin_header-settings: 24px;
+$size__margin_dark-mode: 4px;
+$size__margin_breed-slogan: 1.75rem;
+$size__margin_time-right: 1.3rem;
+$size__margin_gallery-filter_bt: 1.25rem;
+$size__margin_upload-title_top: 3.375rem;
+$size__margin_upload-title_bottom: 1.25rem;
+$size__margin_upload-description_bottom: 2.625rem;
+$size__margin_upload-logs_top: 1.625rem;
+
+//border radius
+$size__standart-button_br: 10px;
+$size__time_br: 5px;
+$size__search-panel_br: 20px;
+
+// border
+$size__search_br: 2px;
+$size__vote-board_br: 4px;
+
+//
+// var
+//

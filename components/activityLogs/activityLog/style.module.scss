@@ -1,0 +1,64 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.log {
+  height: $size__search_height;
+  width: 100%;
+  padding: $size__padding_log;
+  margin: $size__margin_search-panel 0;
+  border-radius: $size__standart-button_br;
+  line-height: $size__button_height;
+  background-color: $color__bg_main;
+  color: $color__text_second;
+  display: flex;
+  align-items: center;
+
+  &__time {
+    padding: 0 $size__text_button;
+    margin-right: $size__margin_time-right;
+    border-radius: $size__time_br;
+    font-size: $size__text_main;
+    background-color: $color__bg_substrate;
+    color: $color__text_main;
+  }
+
+  &__image-id {
+    color: $color__text_main;
+    margin: 0 $size__margin_gallery-filter;
+  }
+
+  &__icon {
+    height: $size__search_height;
+    width: $size__search_height;
+    margin-right: 0;
+    margin-left: auto;
+    transform: scale(0.75);
+
+    &_favorite {
+      @include icon-link(
+        '/assets/svg/fav.svg',
+        $size__search_height,
+        $color__voiting_favorite,
+        $color__voiting_favorite
+      );
+    }
+
+    &_dislike {
+      @include icon-link(
+        '/assets/svg/dislike.svg',
+        $size__search_height,
+        $color__voiting_dislike,
+        $color__voiting_dislike
+      );
+    }
+
+    &_like {
+      @include icon-link(
+        '/assets/svg/like.svg',
+        $size__search_height,
+        $color__voiting_like,
+        $color__voiting_like
+      );
+    }
+  }
+}

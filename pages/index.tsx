@@ -1,24 +1,14 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Home from '../components/home';
 
 import Layout from '../components/layout';
 
-import useLocale from '../hooks/useLocale';
-
-const Home: NextPage = () => {
-  const locale = useLocale();
-
+const Main: NextPage = () => {
   return (
     <Layout>
-      <Head>
-        <title>Next.JS kit start</title>
-        <meta name="description" content="Next.JS kit start" />
-        <link rel="icon" href="/assets/logo.svg" />
-      </Head>
-
-      <>{locale.hello}</>
+      <Home />
     </Layout>
   );
 };
 
-export default Home;
+export default Main;

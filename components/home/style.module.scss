@@ -1,0 +1,21 @@
+@import '../../styles/vars.scss';
+
+.home {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &::before {
+    top: $size__padding_home;
+    left: $size__padding_home * 2.5;
+    right: $size__padding_home;
+    bottom: $size__padding_home;
+    position: absolute;
+    display: block;
+    height: calc(100% - $size__padding_home * 2);
+    width: calc(100% - $size__padding_home * 3.5);
+    content: '';
+    border-radius: $size__padding_home;
+    background-color: $color__bg_home;
+  }
+}

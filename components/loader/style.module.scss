@@ -1,0 +1,26 @@
+@import '../../styles/vars.scss';
+
+.loader {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-spiner {
+  font-size: $size__text_second;
+  animation: rotate-spiner 1.75s ease-in-out infinite;
+}
+
+@keyframes rotate-spiner {
+  0% {
+    transform: rotate(0deg) scale(2) translate(40%, 40%);
+  }
+  50% {
+    transform: rotate(180deg) scale(1) translate(-20%, -20%);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(2) translate(40%, 40%);
+  }
+}

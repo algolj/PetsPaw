@@ -1,0 +1,30 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.breed-link {
+  @include gallary-item-hover;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+
+  &__name {
+    width: 100%;
+    z-index: 1;
+    height: $size__gallery-desc_height;
+    margin: $size__padding_gallery;
+    border-radius: $size__standart-button_br;
+    color: $color__voiting_text;
+    background-color: var(--color__br_card);
+    line-height: $size__gallery-desc_height;
+    text-align: center;
+    font-size: $size__text_main;
+    opacity: 0;
+    transition: opacity 0.23s;
+  }
+  &:hover > &__name {
+    opacity: 1;
+  }
+}

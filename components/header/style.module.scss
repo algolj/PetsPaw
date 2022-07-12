@@ -1,0 +1,31 @@
+@import '../../styles/vars.scss';
+
+.header {
+  position: sticky;
+  height: auto;
+  top: 0;
+  padding: $size__padding_home 0 0 $size__padding_header;
+
+  &__text {
+    margin-top: 93px;
+    margin-bottom: 74px;
+  }
+
+  &__title {
+    line-height: $size__lh_header;
+    font-size: $size__text_header;
+    font-weight: 500;
+  }
+
+  &__topic {
+    margin-bottom: 28px;
+    font-size: $size__text_second;
+    font-weight: 500;
+  }
+
+  &__description {
+    line-height: $size__lh_text;
+    font-size: $size__text_second;
+    color: $color__text_second;
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../styles/vars.scss';
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+
+  &__item {
+    cursor: pointer;
+    width: 138px;
+
+    &:hover .nav__button {
+      transition: 0.2s;
+      color: $color__voiting_text;
+      background-color: $color__voiting_bg-hover;
+    }
+  }
+
+  &__picture {
+    height: $size__nav-picture_height;
+    width: 100%;
+    border-radius: 20px;
+    outline-offset: -4px;
+    outline: 4px solid transparentize($color_first, 0.4);
+
+    &_active {
+      outline: 4px solid $color__voiting_bg-hover;
+    }
+
+    &_voting {
+      background: url('/assets/img/vote-table.png') no-repeat center,
+        $color__menu_vote;
+    }
+
+    &_breeds {
+      background: url('/assets/img/pet-breeds.png') no-repeat center,
+        $color__menu_breeds;
+    }
+
+    &_gallery {
+      background: url('/assets/img/images-search.png') no-repeat center,
+        $color__menu_gallery;
+    }
+  }
+
+  &__button {
+    height: 36px;
+    margin-top: 10px;
+    line-height: 36px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: $color__voiting_text;
+    background-color: var(--color__bg_substrate);
+    text-align: center;
+
+    &_active {
+      background-color: $color__voiting_text;
+      color: $color__voiting_bg;
+    }
+  }
+}

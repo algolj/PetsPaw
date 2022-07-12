@@ -1,0 +1,67 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
+.vote-board {
+  z-index: 2;
+  display: flex;
+  height: $size__vote-board_height;
+  width: $size__vote-board_width;
+  margin-bottom: calc(
+    -1 * ($size__vote-board_height / 2 + $size__vote-board_br)
+  );
+  background-color: var(--color__bg_vote);
+  border-radius: $size__search-panel_br;
+  border: $color__bg_substrate solid $size__vote-board_br;
+  gap: 0 $size__vote-board_br;
+  overflow: hidden;
+
+  &__item {
+    flex: 1;
+
+    &_like {
+      @include icon-link(
+        '/assets/svg/like.svg',
+        100%,
+        $color__voiting_text-active,
+        $color__voiting_like
+      );
+
+      @include vote-button-color($color__voiting_like);
+
+      &:active:before {
+        background-color: $color__voiting_text-active;
+      }
+    }
+
+    &_dislike {
+      @include icon-link(
+        '/assets/svg/dislike.svg',
+        100%,
+        $color__voiting_text-active,
+        $color__voiting_dislike
+      );
+
+      @include vote-button-color($color__voiting_dislike);
+
+      &:active:before {
+        background-color: $color__voiting_text-active;
+      }
+    }
+
+    &_favorite {
+      @include icon-link(
+        '/assets/svg/fav.svg',
+        100%,
+        $color__voiting_text-active,
+        $color__voiting_favorite
+      );
+
+      @include vote-button-color($color__voiting_favorite);
+
+      &:active:before {
+        mask-image: url('/assets/svg/fav-full.svg');
+        background-color: $color__voiting_text-active;
+      }
+    }
+  }
+}

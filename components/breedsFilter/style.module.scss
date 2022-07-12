@@ -1,0 +1,41 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
+.sort-button {
+  @include panel-element;
+
+  background-color: var(--color__filter_bg);
+
+  outline-offset: -$size__search_br;
+  outline: 0 solid var(--color__voiting_bg-hover);
+
+  transition: outline 0.23s;
+
+  &:hover,
+  &_active {
+    outline-width: $size__search_br;
+  }
+
+  &__icon {
+    @include icon-span(
+      $size__button_height,
+      $color__voiting_text-alt,
+      $color__voiting_text
+    );
+    &:hover {
+      background-color: $color__voiting_text;
+    }
+  }
+}
+
+.sort-select {
+  @include select-style;
+
+  &:focus {
+    border: var(--color__voiting_bg-hover) solid $size__search_br;
+  }
+
+  &_full-line {
+    flex: 1;
+  }
+}

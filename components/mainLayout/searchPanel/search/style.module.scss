@@ -1,0 +1,29 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/vars.scss';
+
+.search-container {
+  position: relative;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    height: $size__search_height;
+    border-radius: $size__search-panel_br;
+    padding: $size__text_second;
+    font-size: $size__text_second;
+    color: $color__text_second;
+    background-color: var(--color__bg_substrate);
+
+    &:focus,
+    &_active {
+      border: $color__voiting_bg-active solid $size__search_br;
+    }
+  }
+
+  &__button {
+    @include standart-buttons('/assets/svg/search.svg');
+    position: absolute;
+    top: calc(($size__search_height - $size__button_height) / 2);
+    right: $size__text_second;
+  }
+}
