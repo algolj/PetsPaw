@@ -52,5 +52,6 @@
   "uploadPhoto": "upload photo",
   "catLoad": "Thanks for the Upload - Cat found!",
   "catNotFound": "No Cat found - try a different one",
-  "loading": "UPLOADING"
+  "loading": "UPLOADING",
+  "notFround": "Ooops, not found!"
 }
