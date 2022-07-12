@@ -24,6 +24,10 @@
     background-color: $color__bg_substrate;
     color: $color__text_main;
     cursor: pointer;
+
+    & > option {
+      color: #1d1d1d;
+    }
   }
 
   &_order {

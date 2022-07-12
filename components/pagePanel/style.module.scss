@@ -18,7 +18,7 @@
 
   &_secondary {
     color: $color__voiting_text;
-    background-color: $color__voiting_bg-hover;
+    background-color: var(--color__voiting_bg-hover);
     transition: color 0.23s, background-color 0.23s;
     &:hover {
       @include page-title;

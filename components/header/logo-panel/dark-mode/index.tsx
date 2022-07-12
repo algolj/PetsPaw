@@ -1,12 +1,31 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import style from './style.module.scss';
 
 const DarkMode: FC = () => {
-  const [mode, setMode] = useState(true);
+  const [mode, setMode] = useState(false);
+
+  useEffect(() => {
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: light)').matches
+    ) {
+      setMode(true);
+    }
+  }, []);
+
   const changeMode = () => {
     setMode(!mode);
   };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      document.documentElement.setAttribute(
+        'data-theme',
+        mode ? 'light' : 'dark',
+      );
+    }
+  }, [mode]);
 
   return (
     <div className={style.mode}>

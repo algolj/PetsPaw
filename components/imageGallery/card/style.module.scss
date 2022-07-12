@@ -19,7 +19,7 @@
     height: $size__button_height;
     width: $size__button_height;
     border-radius: $size__standart-button_br;
-    background-color: $color__voiting_bg;
+    background-color: var(--color__br_card);
     opacity: 0;
     transition: opacity 0.23s;
 

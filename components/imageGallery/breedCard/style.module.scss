@@ -17,7 +17,7 @@
     margin: $size__padding_gallery;
     border-radius: $size__standart-button_br;
     color: $color__voiting_text;
-    background-color: $color__voiting_bg;
+    background-color: var(--color__br_card);
     line-height: $size__gallery-desc_height;
     text-align: center;
     font-size: $size__text_main;

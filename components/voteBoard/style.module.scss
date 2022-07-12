@@ -1,5 +1,5 @@
-@import '../../../styles/vars.scss';
-@import '../../../styles/mixins.scss';
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
 
 .vote-board {
   z-index: 2;
@@ -9,7 +9,7 @@
   margin-bottom: calc(
     -1 * ($size__vote-board_height / 2 + $size__vote-board_br)
   );
-  background-color: $color__bg_substrate;
+  background-color: var(--color__bg_vote);
   border-radius: $size__search-panel_br;
   border: $color__bg_substrate solid $size__vote-board_br;
   gap: 0 $size__vote-board_br;

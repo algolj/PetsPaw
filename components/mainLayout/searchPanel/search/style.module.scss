@@ -12,7 +12,7 @@
     padding: $size__text_second;
     font-size: $size__text_second;
     color: $color__text_second;
-    background-color: $color__voiting_bg;
+    background-color: var(--color__bg_substrate);
 
     &:focus,
     &_active {

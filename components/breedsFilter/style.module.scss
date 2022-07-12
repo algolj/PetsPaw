@@ -4,10 +4,10 @@
 .sort-button {
   @include panel-element;
 
-  background-color: $color__voiting_bg-alt;
+  background-color: var(--color__filter_bg);
 
   outline-offset: -$size__search_br;
-  outline: 0 solid $color__voiting_bg-hover;
+  outline: 0 solid var(--color__voiting_bg-hover);
 
   transition: outline 0.23s;
 

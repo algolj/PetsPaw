@@ -5,6 +5,7 @@ import { store } from '../store';
 
 import '../styles/reset-style.scss';
 import '../styles/globals.scss';
+import '../styles/vars.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { useAddFavouriteMutation, useAddVoteMutation } from '../../../store';
+import { useAddFavouriteMutation, useAddVoteMutation } from '../../store';
 
 import style from './style.module.scss';
 
