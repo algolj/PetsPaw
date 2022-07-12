@@ -7,7 +7,7 @@
   width: 100%;
   position: absolute;
   top: 0;
-  background-color: transparentize($color__text_main, 0.6);
+  background-color: var(--color__upload-bg);
   overflow: hidden;
   visibility: hidden;
   padding: $size__margin_main;
@@ -25,7 +25,7 @@
   overflow: auto;
   padding: $size__text_second;
   border-radius: $size__search-panel_br;
-  background-color: $color__bg_main;
+  background-color: var(--color__bg_upload);
 
   &::-webkit-scrollbar {
     width: 0em;
@@ -40,12 +40,12 @@
     );
 
     display: block;
-    background-color: $color__voiting_bg;
     height: $size__button_height;
     width: $size__button_height;
-    border-radius: $size__standart-button_br;
     margin-right: 0;
     margin-left: auto;
+    border-radius: $size__standart-button_br;
+    background-color: var(--color__bg_substrate);
     transition: background-color 0.23s;
 
     &:hover {
@@ -127,7 +127,7 @@
   }
 
   &__drop {
-    background-color: $color__bg_home;
+    background-color: var(--color__voiting_bg-hover);
     border-color: $color__voiting_bg-active;
   }
 
@@ -153,7 +153,7 @@
   font-size: $size__text_main;
   border-radius: $size__standart-button_br;
   color: $color__voiting_text-alt;
-  background-color: $color__voiting_bg;
+  background-color: var(--color__bg_substrate);
   display: flex;
   align-items: center;
 }

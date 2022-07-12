@@ -10,7 +10,7 @@
 @mixin select-style {
   @include panel-element;
   width: auto;
-  background-color: $color__voiting_bg-alt;
+  background-color: var(--color__filter_bg);
   color: $color__voiting_text-alt;
   padding: 0 $size__standart-button_br;
 }
@@ -55,7 +55,7 @@
     $color__voiting_bg-active,
     $color__voiting_text-active
   );
-  background-color: $color__voiting_bg-hover;
+  background-color: var(--color__voiting_bg-hover);
   transition: background-color 0.23s;
 
   &:hover {

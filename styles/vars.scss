@@ -11,12 +11,12 @@ $color_sixth: #ffd280;
 $color_seventh: #8c8c8c;
 
 //background
-$color__bg_main: $color_first;
-$color__bg_home: $color_second;
-$color__bg_substrate: $color_third;
+$color__bg_main: var(--color__bg_main);
+$color__bg_home: var(--color__bg_home);
+$color__bg_substrate: var(--color__bg_substrate);
 
 //text
-$color__text_main: #1d1d1d;
+$color__text_main: var(--color__text_main);
 $color__text_second: $color_seventh;
 $color__text_alt: $color_third;
 
@@ -32,11 +32,10 @@ $color__voiting_dislike: $color_sixth;
 
 //button
 $color__voiting_bg: $color_third;
-$color__voiting_bg-hover: $color_second;
+$color__voiting_bg-hover: #fbe0dc;
 $color__voiting_bg-active: $color_fourth;
 $color__voiting_text: $color_fourth;
 $color__voiting_text-active: $color_third;
-$color__voiting_bg-alt: $color_first;
 $color__voiting_text-alt: $color_seventh;
 
 //

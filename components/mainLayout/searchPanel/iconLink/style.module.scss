@@ -3,11 +3,11 @@
 
 .icon-link {
   display: inline-block;
-  background-color: $color__voiting_bg;
   height: $size__search_height;
   width: $size__search_height;
   border-radius: $size__search-panel_br;
   transition: background-color 0.23s;
+  background-color: var(--color__bg_substrate);
 
   &__icon {
     @include icon-span(

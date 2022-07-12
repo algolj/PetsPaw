@@ -9,7 +9,7 @@ import useGetLikesOrDislikes from '../../hooks/useGetLikesOrDislikes';
 import useLocale from '../../hooks/useLocale';
 
 import { useGetFavouritesQuery, useGetVoteForQuery } from '../../store';
-import VoteBoard from './voteBoard';
+import VoteBoard from '../../components/voteBoard';
 
 const Voting: NextPage = () => {
   const locale = useLocale();

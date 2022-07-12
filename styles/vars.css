@@ -1,0 +1,38 @@
+html,
+html[data-theme='light'] {
+  --color__bg_main: #f8f8f7;
+  --color__bg_upload: #f8f8f7;
+  --color__filter_bg: #f8f8f7;
+  --color__bg_home: #fbe0dc;
+  --color__voiting_bg-hover: #fbe0dc;
+  --color__bg_substrate: #ffffff;
+  --color__bg_vote: #ffffff;
+  --color__br_card: #ffffff;
+  --color__text_main: #1d1d1d;
+  --color__upload-bg: rgba(29, 29, 29, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --color__bg_main: #1d1d1d;
+    --color__bg_upload: #282828;
+    --color__bg_vote: #1d1d1d;
+    --color__bg_home: rgba(255, 255, 255, 0.05);
+    --color__bg_substrate: rgba(255, 255, 255, 0.05);
+    --color__br_card: #282828;
+    --color__filter_bg: rgba(255, 255, 255, 0.05);
+    --color__voiting_bg-hover: rgba(255, 134, 142, 0.2);
+    --color__text_main: #fff;
+  }
+}
+
+html[data-theme='dark'] {
+  --color__bg_main: #1d1d1d;
+  --color__bg_upload: #282828;
+  --color__bg_home: rgba(255, 255, 255, 0.05);
+  --color__bg_substrate: rgba(255, 255, 255, 0.05);
+  --color__br_card: #282828;
+  --color__filter_bg: rgba(255, 255, 255, 0.05);
+  --color__voiting_bg-hover: rgba(255, 134, 142, 0.2);
+  --color__text_main: #fff;
+}

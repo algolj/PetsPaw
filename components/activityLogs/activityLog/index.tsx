@@ -35,10 +35,3 @@ const ActivityLog: FC<IActivityLogProps> = ({
 };
 
 export default ActivityLog;
-
-// created_at: "2022-07-10T16:55:14.000Z"
-// id: 100038670
-// image: {id: '3kl', url: 'https://cdn2.thecatapi.com/images/3kl.jpg'}
-// image_id: "3kl"
-// sub_id: "r0eh43"
-// user_id: "wc0wlo"

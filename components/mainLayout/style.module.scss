@@ -11,7 +11,7 @@
   height: 100%;
   border-radius: $size__search-panel_br;
   padding: $size__text_second;
-  background-color: $color__voiting_bg;
+  background-color: var(--color__bg_substrate);
   overflow: hidden;
 }
 

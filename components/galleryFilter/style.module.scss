@@ -24,6 +24,13 @@
     background-color: $color__bg_substrate;
     color: $color__text_main;
     cursor: pointer;
+    &:focus {
+      border: var(--color__voiting_bg-hover) solid $size__search_br;
+    }
+
+    & > option {
+      color: #1d1d1d;
+    }
   }
 
   &_order {
