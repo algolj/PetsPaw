@@ -1,0 +1,59 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.load-result {
+  width: 100%;
+  padding: $size__padding_dad_h;
+  font-size: $size__text_main;
+  border-radius: $size__standart-button_br;
+  color: $color__voiting_text-alt;
+  background-color: var(--color__bg_substrate);
+  display: flex;
+  align-items: center;
+}
+
+.icon-link {
+  &_success {
+    @include icon-link(
+      '/assets/svg/success.svg',
+      calc($size__text_main * 1.4),
+      $color__voiting_like,
+      $color__voiting_like
+    );
+
+    display: inline-block;
+    margin-right: $size__margin_search-panel;
+    transform: scale(0.9);
+  }
+
+  &_error {
+    @include icon-link(
+      '/assets/svg/error.svg',
+      calc($size__text_main * 1.4),
+      $color__voiting_favorite,
+      $color__voiting_favorite
+    );
+
+    display: inline-block;
+    margin-right: $size__margin_search-panel;
+    transform: scale(0.9);
+  }
+}
+
+.upload__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $size__padding_upload_h $size__padding_upload_w;
+  border-radius: $size__standart-button_br;
+  background-color: $color__voiting_bg-active;
+  color: $color__voiting_text-active;
+  text-transform: uppercase;
+  font-size: $size__text_button;
+  transition: color 0.23s, background-color 0.23s;
+
+  &:hover {
+    color: $color__voiting_text;
+    background-color: $color__voiting_bg-hover;
+  }
+}
