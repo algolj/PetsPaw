@@ -14,17 +14,17 @@ const ImageCarousel: FC<IImageCarousel> = ({ images, alt }) => {
 
   return (
     <ImageContainer image={currentImage} alt={alt}>
-      <div className={style.carousel}>
+      <ul className={style.carousel}>
         {images.map((img) => (
-          <span
+          <li
             className={`${style.carousel__item} ${
               img === currentImage && style.carousel__item_active
             }`}
             key={img}
             onClick={() => setCurrentImage(img)}
-          ></span>
+          ></li>
         ))}
-      </div>
+      </ul>
     </ImageContainer>
   );
 };
