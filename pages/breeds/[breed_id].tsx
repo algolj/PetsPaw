@@ -64,7 +64,7 @@ const Breeds: NextPage<{ breedInfo: IBreed; img_url: string[] }> = ({
   return (
     <MainLayout>
       <Head>
-        <title>{breedInfo.name} · PetsPaw</title>
+        <title>Breed · PetsPaw</title>
       </Head>
 
       <PagePanel title={locale.breeds} isSubTitle={true} href="breeds">
