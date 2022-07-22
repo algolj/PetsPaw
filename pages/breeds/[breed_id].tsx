@@ -7,13 +7,14 @@ import BreedInfo from '../../components/breedInfo';
 import MainLayout from '../../components/mainLayout';
 import PagePanel from '../../components/pagePanel';
 import NotFoud from '../../components/notFound';
-import ImageContainer from '../../components/imageContainer';
+import ImageCarousel from '../../components/imageCarousel';
 
 import style from './style.module.scss';
 
 import { constants } from '../../constants';
 
 import { IBreed } from '../../interfaces/breed.interface';
+import { IBreedSearch } from '../../interfaces/breedSearch.interface';
 
 export async function getStaticPaths() {
   const path = await fetch(`${constants.API_URL}breeds`).then((req) =>
@@ -32,8 +33,14 @@ export async function getStaticProps({
 }: {
   params: { breed_id: string };
 }) {
+  const searchParams = new URLSearchParams({
+    breed_id: params.breed_id,
+    page: '0',
+    limit: '5',
+  });
+
   const breed = await fetch(
-    `${constants.API_URL}images/search?breed_id=${params.breed_id}`,
+    `${constants.API_URL}images/search?${searchParams}`,
     {
       headers: {
         'x-api-key': constants.API_KEY,
@@ -41,23 +48,23 @@ export async function getStaticProps({
     },
   )
     .then((req) => req.json())
-    .then((breedArr) => ({
-      url: breedArr?.[0]?.url || '',
-      breedInfo: breedArr[0]?.breeds?.[0] || {},
+    .then((breedArr: IBreedSearch[]) => ({
+      img_url: breedArr.map(({ url }) => url),
+      breedInfo: breedArr[0].breeds[0],
     }));
   return { props: { ...breed } };
 }
 
-const Breeds: NextPage<{ breedInfo: IBreed; url: string }> = ({
+const Breeds: NextPage<{ breedInfo: IBreed; img_url: string[] }> = ({
   breedInfo,
-  url,
+  img_url,
 }) => {
   const locale = useLocale();
 
   return (
     <MainLayout>
       <Head>
-        <title>Breed · PetsPaw</title>
+        <title>{breedInfo.name} · PetsPaw</title>
       </Head>
 
       <PagePanel title={locale.breeds} isSubTitle={true} href="breeds">
@@ -67,15 +74,7 @@ const Breeds: NextPage<{ breedInfo: IBreed; url: string }> = ({
       </PagePanel>
       {breedInfo?.id ? (
         <>
-          <ImageContainer image={url} alt={breedInfo.name}>
-            <div className={style.carousel}>
-              {Array(5)
-                .fill('')
-                .map((el, i) => (
-                  <span className={style.carousel__item} key={i}></span>
-                ))}
-            </div>
-          </ImageContainer>
+          <ImageCarousel images={img_url} alt={breedInfo.name} />
           <BreedInfo {...breedInfo} />
         </>
       ) : (
