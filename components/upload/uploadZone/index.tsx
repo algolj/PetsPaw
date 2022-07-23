@@ -5,6 +5,8 @@ import useLocale from '../../../hooks/useLocale';
 
 import style from './style.module.scss';
 
+import { constants } from '../../../constants';
+
 interface IUploadZone {
   image: File | null;
   setImage: Dispatch<SetStateAction<File | null>>;
@@ -15,10 +17,8 @@ const UploadZone: FC<IUploadZone> = ({ image, setImage }) => {
 
   const [drag, setDrag] = useState(true);
 
-  const format = ['image/png', 'image/jpeg'];
-
   const setNewImage = (file: File | undefined) => {
-    if (file && format.includes(file.type)) {
+    if (file && constants.IMG_FORMAT.includes(file.type)) {
       setImage(file);
       setDrag(false);
     }
@@ -45,7 +45,7 @@ const UploadZone: FC<IUploadZone> = ({ image, setImage }) => {
         type="file"
         id="img-upload"
         className={style.dad__input}
-        accept={format.join(', ')}
+        accept={constants.IMG_FORMAT.join(', ')}
         onChange={(e) => setNewImage(e.target.files?.[0])}
       />
       <label

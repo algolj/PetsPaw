@@ -1,22 +1,22 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 import useLocale from '../../hooks/useLocale';
 import useGetGallery from '../../hooks/useGetGallery';
 
-import GalleryFilter from '../../components/galleryFilter';
-import MainLayout from '../../components/mainLayout';
+import Upload from '../../components/upload';
 import PagePanel from '../../components/pagePanel';
+import MainLayout from '../../components/mainLayout';
 import ImageGallery from '../../components/imageGallery';
+import GalleryFilter from '../../components/galleryFilter';
 import FavoriteCard from '../../components/imageGallery/favoriteCard';
 
 import style from './style.module.scss';
 
 import { IStore } from '../../interfaces/store.interface';
 import { IGalleryParams } from '../../interfaces/galleryParams.interface';
-import Upload from '../../components/upload';
-import { useState } from 'react';
-import Head from 'next/head';
 
 const GalleryPage: NextPage = () => {
   const locale = useLocale();

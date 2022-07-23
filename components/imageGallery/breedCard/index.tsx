@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import Link from 'next/link';
 
 import style from './style.module.scss';

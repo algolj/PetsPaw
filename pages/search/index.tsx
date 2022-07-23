@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-
 import { useRouter } from 'next/router';
 
 import useLocale from '../../hooks/useLocale';
+
 import { useGetSearchBreedsQuery } from '../../store';
 
 import MainLayout from '../../components/mainLayout';

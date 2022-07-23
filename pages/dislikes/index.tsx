@@ -5,7 +5,7 @@ import MainLayout from '../../components/mainLayout';
 import PagePanel from '../../components/pagePanel';
 import ImageGallery from '../../components/imageGallery';
 import ActivityLogs from '../../components/activityLogs';
-import LikeDislikeCard from '../../components/imageGallery/LikeDislikeCard';
+import LikeDislikeCard from '../../components/imageGallery/likeDislikeCard';
 
 import useLocale from '../../hooks/useLocale';
 import useGetLikesOrDislikes from '../../hooks/useGetLikesOrDislikes';

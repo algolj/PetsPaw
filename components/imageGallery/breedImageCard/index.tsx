@@ -1,4 +1,7 @@
 import { FC } from 'react';
+
+import { constants } from '../../../constants';
+
 import { useGetImageQuery } from '../../../store';
 
 import BreedCard from '../breedCard';
@@ -16,7 +19,7 @@ const BreedImageCard: FC<IBreedImageCardProps> = ({ id, name, image_id }) => {
     <BreedCard
       id={id}
       name={name}
-      image={imgLink?.url || '/assets/svg/upload-bg.svg'}
+      image={imgLink?.url || constants.UPLOAD_IMG}
     />
   );
 };
