@@ -77,67 +77,6 @@
       color: $color__voiting_text;
     }
   }
-
-  &__button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: $size__padding_upload_h $size__padding_upload_w;
-    border-radius: $size__standart-button_br;
-    background-color: $color__voiting_bg-active;
-    color: $color__voiting_text-active;
-    text-transform: uppercase;
-    font-size: $size__text_button;
-    transition: color 0.23s, background-color 0.23s;
-
-    &:hover {
-      color: $color__voiting_text;
-      background-color: $color__voiting_bg-hover;
-    }
-  }
-}
-
-.dad {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: $size__upload_height;
-  padding: $size__padding_dad_h $size__padding_dad_w;
-  border-radius: $size__search-panel_br;
-  background: url('/assets/svg/upload-bg.svg') no-repeat 50% center,
-    $color__bg_substrate;
-  overflow: hidden;
-  border: $size__search_br dashed $color__bg_home;
-  cursor: pointer;
-
-  &__input {
-    display: none;
-  }
-
-  &__description {
-    color: $color__text_second;
-    font-size: $size__text_second;
-    text-align: center;
-
-    &_strong {
-      color: $color__text_main;
-      font-weight: 500;
-    }
-  }
-
-  &__drop {
-    background-color: var(--color__voiting_bg-hover);
-    border-color: $color__voiting_bg-active;
-  }
-
-  &__preview {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    border-radius: $size__search-panel_br;
-    overflow: hidden;
-  }
 }
 
 .logs-panel {
@@ -145,43 +84,4 @@
   text-align: center;
   font-size: $size__text_second;
   color: $color__text_second;
-}
-
-.load-result {
-  width: 100%;
-  padding: $size__padding_dad_h;
-  font-size: $size__text_main;
-  border-radius: $size__standart-button_br;
-  color: $color__voiting_text-alt;
-  background-color: var(--color__bg_substrate);
-  display: flex;
-  align-items: center;
-}
-
-.icon-link {
-  &_success {
-    @include icon-link(
-      '/assets/svg/success.svg',
-      calc($size__text_main * 1.4),
-      $color__voiting_like,
-      $color__voiting_like
-    );
-
-    display: inline-block;
-    margin-right: $size__margin_search-panel;
-    transform: scale(0.9);
-  }
-
-  &_error {
-    @include icon-link(
-      '/assets/svg/error.svg',
-      calc($size__text_main * 1.4),
-      $color__voiting_favorite,
-      $color__voiting_favorite
-    );
-
-    display: inline-block;
-    margin-right: $size__margin_search-panel;
-    transform: scale(0.9);
-  }
 }

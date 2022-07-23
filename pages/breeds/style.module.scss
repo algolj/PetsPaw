@@ -1,31 +1,5 @@
-@import '../../styles/vars.scss';
 @import '../../styles/mixins.scss';
 
 .breed-title {
   @include page-title;
-}
-
-.carousel {
-  z-index: 1;
-
-  display: flex;
-  gap: 0 $size__breed-img-carusel_gap;
-  background-color: var(--color__br_card);
-  border-radius: $size__search-panel_br;
-  padding: $size__padding_gallery;
-
-  &__item {
-    display: block;
-    height: $size__text_button;
-    width: $size__text_button;
-    border-radius: 50%;
-    background-color: var(--color__voiting_bg-hover);
-    cursor: pointer;
-    transition: background-color 0.23s;
-
-    &:hover,
-    &_active {
-      background-color: $color__voiting_bg-active;
-    }
-  }
 }

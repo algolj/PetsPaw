@@ -4,13 +4,17 @@ import { useDeleteVoteMutation, useGetImageQuery } from '../../../store';
 
 import Card from '../card';
 
-interface ILikeDislikeCardProps {
+interface ILikeAndDislikeCardProps {
   id: number;
   image_id: string;
   type: 'like' | 'dislike';
 }
 
-const LikeDislikeCard: FC<ILikeDislikeCardProps> = ({ id, image_id, type }) => {
+const LikeAndDislikeCard: FC<ILikeAndDislikeCardProps> = ({
+  id,
+  image_id,
+  type,
+}) => {
   const { data: image } = useGetImageQuery(image_id);
 
   const [deleteVote] = useDeleteVoteMutation();
@@ -35,4 +39,4 @@ const LikeDislikeCard: FC<ILikeDislikeCardProps> = ({ id, image_id, type }) => {
   );
 };
 
-export default LikeDislikeCard;
+export default LikeAndDislikeCard;

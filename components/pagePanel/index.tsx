@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import style from './style.module.scss';
-import Link from 'next/link';
 
 interface IPagePanel {
   title: string;

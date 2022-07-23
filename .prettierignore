@@ -6,6 +6,7 @@ next.config.js
 .prettierrc
 .github
 package.json
+README.md
 package-lock.json
 tsconfig.json
 node_modules

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import useLocale from '../../hooks/useLocale';
 
 import style from './style.module.scss';

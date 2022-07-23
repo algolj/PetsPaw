@@ -5,7 +5,7 @@ import MainLayout from '../../components/mainLayout';
 import PagePanel from '../../components/pagePanel';
 import ImageGallery from '../../components/imageGallery';
 import ActivityLogs from '../../components/activityLogs';
-import LikeDislikeCard from '../../components/imageGallery/LikeDislikeCard';
+import LikeAndDislikeCard from '../../components/imageGallery/likeAndDislikeCard';
 
 import useLocale from '../../hooks/useLocale';
 import useGetLikesOrDislikes from '../../hooks/useGetLikesOrDislikes';
@@ -23,7 +23,12 @@ const LikesPage: NextPage = () => {
       <PagePanel title={locale.like} href="likes" />
       <ImageGallery isLoading={isLoading}>
         {(likes || []).map(({ id, image_id }) => (
-          <LikeDislikeCard key={id} id={id} image_id={image_id} type="like" />
+          <LikeAndDislikeCard
+            key={id}
+            id={id}
+            image_id={image_id}
+            type="like"
+          />
         ))}
       </ImageGallery>
       <ActivityLogs like={likes} />

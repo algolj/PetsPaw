@@ -1,13 +1,17 @@
 import { FC } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import style from './style.module.scss';
 
 import useLocale from '../../hooks/useLocale';
-import PagePanel from '../pagePanel';
 import useGetAllBreedsName from '../../hooks/useGetAllBreedsName';
-import { useDispatch, useSelector } from 'react-redux';
+
 import { IStore } from '../../interfaces/store.interface';
+
+import PagePanel from '../pagePanel';
+
 import { changeBreed, changeLimit, changeSort } from '../../store';
+
 import { constants } from '../../constants';
 
 const BreedsFilter: FC = () => {
@@ -17,17 +21,6 @@ const BreedsFilter: FC = () => {
   const locale = useLocale();
 
   const breedsName = useGetAllBreedsName();
-
-  const sortBy = [
-    {
-      img: '/assets/svg/sort-b-a.svg',
-      type: 'b-a',
-    },
-    {
-      img: '/assets/svg/sort-a-b.svg',
-      type: 'a-b',
-    },
-  ];
 
   const changeCurrentSort = (sort: string) => {
     dispatch(changeSort(sort));
@@ -57,7 +50,7 @@ const BreedsFilter: FC = () => {
           </option>
         ))}
       </select>
-      {sortBy.map(({ img, type }) => (
+      {constants.BREED_FILTER.map(({ img, type }) => (
         <button
           key={img}
           className={`${style['sort-button']} ${
