@@ -1,15 +1,15 @@
 import { NextPage } from 'next';
 
+import PagePanel from '../../components/pagePanel';
+import VoteBoard from '../../components/voteBoard';
+import MainLayout from '../../components/mainLayout';
 import ActivityLogs from '../../components/activityLogs';
 import ImageContainer from '../../components/imageContainer';
-import MainLayout from '../../components/mainLayout';
-import PagePanel from '../../components/pagePanel';
 
 import useGetLikesOrDislikes from '../../hooks/useGetLikesOrDislikes';
 import useLocale from '../../hooks/useLocale';
 
 import { useGetFavouritesQuery, useGetVoteForQuery } from '../../store';
-import VoteBoard from '../../components/voteBoard';
 
 const Voting: NextPage = () => {
   const locale = useLocale();

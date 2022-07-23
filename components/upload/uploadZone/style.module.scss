@@ -1,0 +1,45 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.dad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: $size__upload_height;
+  padding: $size__padding_dad_h $size__padding_dad_w;
+  border-radius: $size__search-panel_br;
+  background: url('/assets/svg/upload-bg.svg') no-repeat 50% center,
+    $color__bg_substrate;
+  overflow: hidden;
+  border: $size__search_br dashed $color__bg_home;
+  cursor: pointer;
+
+  &__input {
+    display: none;
+  }
+
+  &__description {
+    color: $color__text_second;
+    font-size: $size__text_second;
+    text-align: center;
+
+    &_strong {
+      color: $color__text_main;
+      font-weight: 500;
+    }
+  }
+
+  &__drop {
+    background-color: var(--color__voiting_bg-hover);
+    border-color: $color__voiting_bg-active;
+  }
+
+  &__preview {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: $size__search-panel_br;
+    overflow: hidden;
+  }
+}

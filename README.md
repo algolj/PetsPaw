@@ -36,5 +36,3 @@ This is a regular Next.JS project.
 2. Unit tests.
 
 <small>P.S. I have done these features in other projects, specifically adaptive and responsive design. Maybe I'll add them to this project later.</small>
-
-P.S. I know that my code style is not perfect, especially in the upload page. I will refactor it on 18.07-20.07, but for now my pet-project is waiting for me 🦸‍♂️
