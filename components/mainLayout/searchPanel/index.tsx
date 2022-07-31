@@ -27,17 +27,17 @@ const SearchPanel: FC = () => {
     {
       name: locale.like,
       img: '/assets/svg/like.svg',
-      path: 'likes',
+      path: '/likes',
     },
     {
       name: locale.favorite,
       img: '/assets/svg/fav.svg',
-      path: 'favorites',
+      path: '/favorites',
     },
     {
       name: locale.dislike,
       img: '/assets/svg/dislike.svg',
-      path: 'dislikes',
+      path: '/dislikes',
     },
   ];
 
